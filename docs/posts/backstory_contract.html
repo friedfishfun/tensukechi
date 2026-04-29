@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>裏話　～契約モメモメ | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>裏話　～契約モメモメ</h1>
+  <div class="post-meta">2024年06月28日 &nbsp; <a class="cat-badge" href="../categories/partnerselection.html">4.建築パートナー選定</a></div>
+  <div class="post-body">契約まで
+
+Fチームさんとの契約は、でも実はもめました。
+
+まず値引きはしてもらいました。というか先方から提案がありました。
+
+ここまでの経緯を読んでいただけばお分かりの通り、Fチームさんは最後方に位置していました。そのことは正直にお伝えしていました。
+なので、営業さんとしては大外をまくる必要性は強く感じていたでしょう。
+
+ハウスメーカーの営業さんをそんなに知らないですが、Fチームの営業さんはそんなごり押しタイプでは本来ない気がします。ただ、教科書通り？、値引きの提案をされ、決算期のお話をいただき、契約を迫られました。
+
+で、もめ始めました。
+<h2>決められない原因はやっぱり地下室</h2>
+「値引き」以外には契約を早める理由は施主側にはないです。しかし、いずれにせよ他の2社にしてもそろそろ契約を決断しないと詳細設計に入れない状況でもありました。
+
+なにより、もともと押しに弱い性格でして。結論を引っ張って、追加提案作業させてというのがどうにも苦手です。
+
+躊躇した最大の原因は、ここでもやはり「地下室」でした。
+
+「地下室」だけ切り取ると、3社比較で一番高い。加えて見積もりの詳細がない、超どんぶり。建物価格のぶっちゃけ1/3くらいがブラックボックス。
+Fチームさん、本当に正直な人たちなんで、「どうなるかわからない」顔をされています。。
+
+こうなると細かいところに目が行き始めます。
+<h2>標準約款</h2>
+極めつけは契約書。まず嚙みついたのは秘密保持。こうやってブログで情報公開していくとしたら、どこまでが機密情報なのかと。順調ならお互いよいのでしょうが、不都合が生じたときどうなるのかと。
+
+あと天災発生時の工事解除権なるものが受託者側にある。つまり建ててる途中で天災が起きたときどうなるのかと。我が家は特殊な造りなんで、途中から引き継げる会社はないと思われ。
+
+標準約款なるものがあるんですね。いわば「常識」だと。 <a href="https://www.mlit.go.jp/totikensangyo/const/content/001331104.pdf">https://www.mlit.go.jp/totikensangyo/const/content/001331104.pdf</a>
+
+言われるほどにこちらはむしろ頑なになる。もちろん標準約款とFチームさん契約書との差分は全部確認したし。
+
+標準約款はこう始まる。
+<div class="inyoumodoki">
+
+第一条 発注者及び受注者は、<strong>各々が対等な立場において</strong>、日本国の法令を遵守して、互いに協力し、信義を守り、この約款に基づき、<strong>設計図書に従い</strong>、誠実にこの契約を履行する
+（一部省略。太字筆者）
+
+</div>
+もちろんそうだ。だが、ド素人と玄人とが、個人と会社とが、「対等」などということは現実不可能だ。情報格差は大きく、互いに考えている己が「信義」はきっと違う。
+
+そして設計図書がまだ完成していない段階なのだ。ハンコを押したところで本質的に契約不成立だ。
+<h2>結論と振り返り</h2>
+結局、文面は全部こちらが呑み込んだ。営業さんは一部本社まで掛け合ってくれたみたいですが。
+
+だが振り返れば、清水寺の舞台に立っていたのはこちらだけではなかったのである。Fチームさんも、なんともわからない謎の物体（地下室）を、見積もりをもって約束していたということだ。
+
+私がこの覚悟と誠実さを知るのは、詳細設計を進めていった半年近く経った後のことである。
+
+もめない方がいいに決まっている。
+
+だけど、この初期段階で言いたいことを言えたのはよかったと思う。不安も言えた。何かが伝わったと思う。「互いに協力し、信義を守り、誠実に」対応することの約束はできたと思う。
+
+最後は所長さんも出てきた場で、ハンコを押させていただいたとき、そう思った。腹が決まった。
+
+なげー。
+
+<!-- notionvc: cd50313d-777a-4230-bc3e-4ff5d904bc30 --></div>
+  <div class="post-nav"><a href="shelter.html">← もう一つの地下室～地下シェルターという選択肢</a><a href="general_estimation.html">地下室お見積もり（教科書編） →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

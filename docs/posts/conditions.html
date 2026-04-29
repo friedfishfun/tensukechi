@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飲食店の設計条件 | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>飲食店の設計条件</h1>
+  <div class="post-meta">2024年07月01日 &nbsp; <a class="cat-badge" href="../categories/openingofrestaurant.html">6.できるか店舗</a></div>
+  <div class="post-body"><h2>飲食店設計に求められること</h2>
+ChatGPTにまとめてもらおう。
+<div class="yellowbox">
+
+以下に、飲食店開業における法的基準として重要な項目について具体的な基準を挙げます。これらは一般的な指針であり、地域や種類によって詳細な要件が異なる場合がありますので、実際の運営前に地方自治体や専門家と相談することが重要です。
+<ul>
+ 	<li>飲食業許可:
+<ul>
+ 	<li>飲食店を営業するためには、地方自治体からの飲食業許可が必要です。これには、営業場所や設備の適合性、衛生管理の実施計画などが含まれます。</li>
+</ul>
+</li>
+ 	<li>建築基準法の遵守
+<ul>
+ 	<li>耐火性<span style="font-size: 16px;">: 飲食店の建物は、耐火性の基準を満たしている必要があります。建物の規模や使用方法に応じて、耐火構造や耐火性能が定められています。</span></li>
+ 	<li>避難設備<span style="font-size: 16px;">: 客席数や建物の階数に応じて、適切な数の非常口と避難経路が確保されている必要があります。非常口の位置やサイズ、開口部の仕様などが定められています。</span></li>
+</ul>
+</li>
+ 	<li>衛生管理
+<ul>
+ 	<li>食品衛生法: 食品の保管、調理、提供において衛生基準を遵守する必要があります。具体的には、食品の衛生管理計画の策定と実施が求められます。食品の取り扱いにおける衛生的な設備や手洗い設備の設置も含まれます。</li>
+ 	<li>手洗い設備: トイレの近くや調理場に手洗い設備を設置し、水道法や食品衛生法に基づく基準を満たす必要があります。</li>
+</ul>
+</li>
+ 	<li>消防法の遵守
+<ul>
+ 	<li>消火器: 適切な数と種類の消火器を設置し、定期的な点検と保守を行う必要があります。消火器の設置場所と型式は消防法に基づいて指定されます</li>
+ 	<li>非常口と煙感知器: 適切な位置に非常口を設置し、必要に応じて煙感知器も設置する必要があります。建物の規模や階数に応じて、これらの設備の数や位置が決定されます。</li>
+</ul>
+</li>
+ 	<li>都市計画法の遵守
+<ul>
+ 	<li>用途地域: 開業する場所が都市計画法で指定された用途地域に適合しているかを確認します。商業地域や住宅地域での飲食店の設置条件は異なります。</li>
+ 	<li>建物の高さと間口: 地域の条例に基づき、建物の高さや外観、店舗の面積、間口などが制限されています。</li>
+</ul>
+</li>
+</ul>
+</div>
+うーん。後々まで悩まされる項目がたくさんある。
+<h2>衛生管理詳細</h2>
+今回は3の衛生管理のところに特化してまとめよう。この部分はChatGPTがだいぶ雑なので、他サイトから。
+
+キッチンベースさんがとてもよくまとめていらっしゃるので引用させていただきたい。
+<a href="https://kitchenbase.jp/magazine/2164/">飲食店の開業に必須な保健所の営業許可を取るためのポイント</a>
+<blockquote><strong>厨房の床は掃除しやすい構造になっているか
+</strong>防水仕様（コンクリート・タイル）が最適です。
+
+<strong>2層シンクが設置されていて、シンクは既定のサイズを満たしているか
+</strong>水とお湯の蛇口が独立した2層シンクであること・シンクのサイズは1層ごとに「幅45cm×奥行き36cm×深さ18cm以上」が必要です。
+
+<strong>厨房内、トイレ内に適性サイズの手洗器が設置されているか
+</strong>最低でも厨房の従業員用手洗いと、お客様用の手洗いの2つを設置すること・サイズは「幅36cm×奥行き28cm以上」
+
+<strong>手洗い器の消毒器が固定式か
+</strong>自治体によっては壁や洗面台に固定することが求められます。
+
+<strong>厨房と客室が扉などで分けられていること
+</strong>ビュッフェ・ドリンクバーなどは保健所へ相談することで許可が下ります。
+
+<strong>厨房内に冷蔵庫等の設備が収まっているか</strong>
+
+<strong>冷蔵庫に温度計が設置されているか
+</strong>庫外から分かる温度計（隔測温度計）の設置が必要です。
+
+<strong>食器棚に戸がついていること
+</strong>素材はステンレス・木材・ガラスなどなんでも可能です。
+
+<strong>店内の明るさは十分か
+</strong>厨房で100ルクス以上の明るさが必要です。
+
+<strong>店内の換気は十分か
+</strong>換気扇はシャッター付のものが求められます。
+
+<strong>ネズミやゴキブリなどへの対策は十分か
+</strong>網戸や防虫防鼠設備を設置しましょう。
+
+<strong>衛生的なゴミ箱はあるか
+</strong>フタ付きのゴミ箱を設置しましょう。</blockquote>
+&nbsp;
+
+もっとマニアックに整理されているのはテンポスさん。こちらもどうぞ。
+<a href="https://www.tenpos.com/foodmedia/management/6970/">飲食店で必須の保健所検査！チェックすべき基準と合格のポイントとは？</a>
+<h2>グリーストラップ</h2>
+テンポスさんのまとめにも、キッチンベースさんのまとめにもないところでいうと、グリーストラップ問題がありますね。
+
+義務だとか義務じゃないだとかいろいろ出てきますが、どうやら東京都では義務のようです。
+
+こちらのRESTAさんの記事が良くまとまっている。
+<a href="https://inuki-ichiba.jp/resta/inshokuten-greasetrap/">飲食店の厨房にグリーストラップ「グリスト」を設置する義務や必要性はあるのか？</a>
+
+記事にあるようにグリーストラップにもいろいろあるということ。結論、我が家ではシンク下に置き型グリーストラップを設置することで進んでいます。
+
+他の形式で設置しようと思うと、それこそ新築工事の今じゃないと大変だと思われ。
+置き型は掃除が大変というアドバイスを保健所の方からもらっており、慎重な判断が求められるところです。
+<h2>まとめ～飲食わかる設計士さんは必須</h2>
+ほとんど引用記事みたいになってしまった。
+
+加えて、途中割愛した「衛生管理」以外の項目もある。
+
+これ全部理解して設計しないといけないわけで、異常に大変。。。ということをお伝えしたかった。
+
+Fチームさんに店舗設計経験のある設計士さんがいたのがいかに大きかったか。ご縁に感謝しかない。それでも設計士さんも知らないこともあって、保健所に問い合わせたりしながら進めていただいている。
+
+加えて内装については飲食専門でやっていらっしゃるデザイナーさんの手助けを借りることにした。ここでも的確なアドバイスをいただけている。
+
+でもまだ抜けがあるかもしれないし、最後は保健所さん次第みたいなところもありそうだ。後戻りできないところだけでも抑えていれば仕方ないのかなと思っている。
+
+こんな素敵な出会いがあればよいが、ほかのハウスメーカーさんはどうなんですかね。個人的には、経験のある設計士さんが付いてくれることをハウスメーカー選びの条件に加えないといけないんじゃないかと思う。
+
+さもなくば飲食店コンサルへの出費を覚悟するか。とにかく大変だ。
+
+<!-- notionvc: 3d422722-1bf5-4984-9b84-f3f6562e4764 --></div>
+  <div class="post-nav"><a href="real_estimation.html">← 地下室お見積もり（実際編）</a><a href="itteisou.html">第一種低層住居専用地域で飲食店 →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

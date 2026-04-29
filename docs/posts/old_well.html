@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>裏話　～古井戸が出てきた | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>裏話　～古井戸が出てきた</h1>
+  <div class="post-meta">2024年07月12日 &nbsp; <a class="cat-badge" href="../categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+  <div class="post-body"><h2>井戸出現</h2>
+基礎工事が始まった初日。Fチームさんから衝撃の連絡が。。。
+
+「古井戸らしきものが出てきました」
+
+真っ白になりかかった頭で、
+<ul>
+ 	<li>最悪、そもそも地盤として大丈夫なのか。地下は成立するのか</li>
+ 	<li>撤去費用（あるいは追加の地盤補強工事費用）はどのくらいかかるのか</li>
+ 	<li>近隣に迷惑にならないのか</li>
+</ul>
+疑問が湧き出てくる。
+
+費用問題は<a href="https://tensukechi.com/non_conformity/">こちら</a>で触れた続きとなる。土地の売主さんとの交渉。
+現在進行形なのでこれ以上はかけない。
+<h2>地盤問題</h2>
+たぶん大丈夫とのこと。
+
+井戸は今回、地下3メートルくらい掘ったところでその入り口が見つかった。そこからさらに3メートルくらい掘られており、枯れてもいないとのこと。その深さだと、元のお住まいだった方も知らなかったんだろうなと思う。
+
+今後、水源が枯れてしまった場合の影響というのは正直わからないとも言われた。ただこれはもう我が家だけの問題ではない。地下水源がどう広がっているかもわからず。
+
+地盤としては大丈夫だろうとも。これも今後の様子を見守るしかない。地盤の表層改良は予定しているが、それ以上の工事にならないことを祈る。。
+<h2>古井戸への対応</h2>
+神主さんを呼んでお祓いをした。つい先日地鎮祭に来ていただいたばかりなのにー。出張神主さんの費用は3.5万円。これもネットで見かける金額より高いな。東京料金かな。
+
+水の神様をお呼びして、もう使わない井戸なのでお引越しいただくという儀式のようでした。貞子様がいるわけじゃないので勘違いなきよう。
+
+<img class="size-medium wp-image-176" src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-12-10.28.34-A-hand-drawn-style-illustration-depicting-a-scene-where-a-water-deity-is-emerging-from-an-old-well-and-gracefully-departing.-The-scene-should-include--300x300.webp" alt="古井戸から水の神様（DALL-E作成）" width="300" height="300" /> 古井戸から水の神様（DALL-E作成）
+
+その後、井戸に砂や砂利を投入し、パンパンになるまで詰めてふさぐそうだ。とはいえ、水脈自体は広がっているのでそれを埋められるわけじゃぁない。
+
+近隣に井戸を使っている人がいるとすると影響がないとも言い切れないようだが、、、うーん少なくとも両隣はない。仮に近所にあったとしても、水脈一緒とも限らないし、もはやコントローラブルだなぁ。
+
+という感じで、瞬く間に対策が練られ、こちらとしては断りようもない工事に費用提示がされる。金額はネットで10～20万と書かれているみたいだが、これまた東京料金になる感じ。土地の売主さんとの交渉次第ではあるが、痛い出費ではある。
+
+考えれば、上水道が整備されるまでは井戸が日常生活に必須だったわけで、そこらかしこにあったはず。大きな屋敷や長屋には最低1つはあったのだろう。びっくりしたけど、よくある話なのかな。地下さえ掘っていなければ気づかなかった深度であり、地下ならではなのかもしれない。
+
+掘ればなんか出るものなのかもしれない。。。
+
+<!-- notionvc: 19c168fc-81ee-45c5-adc3-9d511b6bc5cb --></div>
+  <div class="post-nav"><a href="non_conformity.html">← 裏話　～契約不適合責任</a><a href="hand_washing_1.html">5坪なんですけど…手洗いの話～1 →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コンテナハウス | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>コンテナハウス</h1>
+  <div class="post-meta">2024年06月14日 &nbsp; <a class="cat-badge" href="../categories/journeytofindproperty.html">3.物件探しの旅</a></div>
+  <div class="post-body"><h2>コンテナハウスで自宅併設？</h2>
+もう一回考えるならコンテナハウス併設で考えてみたい。こんなの（<a href="http://www.juutakuecokoubou.com/kibako/index.html">住たくeco工房さん「木箱」</a>）。ステキすぎる。
+これならちょっと広い駐車場がある家なら、併設で店舗開業できそう。
+
+<img class="size-medium wp-image-69" src="https://tensukechi.sakura.ne.jp/home/wp-content/uploads/2024/06/DALL·E-2024-06-14-18.46.04-An-illustration-for-a-blog-post-about-combining-a-residential-house-with-a-container-house-for-a-restaurant.-The-image-should-depict-a-small-cozy-res-300x300.webp" alt="コンテナハウス" width="300" height="300" /> コンテナハウスで開業（DALL-E作成）
+
+前項に書いた通り、家の改装で実現するのはまっとうにやると無理難題だらけ。
+そもそもキッチン増設するのだけで大変そう。
+さらに大変なのはトイレ問題じゃないかな。トイレのない飲食店ってわけにいかないし、てか保健所通らないはずだし、自宅のトイレどうぞってわけにもいかない。
+
+トイレ問題は人間社会始まって以来、変わらぬ難問なわけです。
+
+上記、住宅ECO工房さんの「木箱」ならトイレもなんなく設置可能。ん？39万円って、注文住宅でトイレ1か所作るより安いんじゃないか？なんならちょっといいタンクレストイレ本体より安い。
+（<a href="http://www.juutakuecokoubou.com/kibako/lineup_standard.html">住宅eco工房さんの木箱。料金表あり</a>）
+
+この話、いずれも“実際にはやっていない”話ですので、そういうご理解のもと読んでください。
+
+このブログは自分の経験を丸裸にするコンセプトなんですが、それだけじゃネタがたりないんです。そのうちちゃんと調べなおして、誤情報は直していきたいと思ってはいます。いつか。きっと。できれば。
+<h2>コンテナハウスのメリット？</h2>
+妄想ついでにいい加減なことを付け加えると、飲食店を開設するうえで「移動可能な物件」は大いに優位なはずです。つまり屋台や今はやりのキッチンカーの類ですね。
+
+もちろん保健所がらみの営業許可や衛生管理の資格とか変わらなかったと思いますが、「建築物」じゃないので、立地に関わる営業許可が全然違ったはず。 （当時はもうちょい調べていたんですが、記憶あいまいです）
+
+となるとコンテナハウス、もっと言えばトレーラーハウス的なものはどうか。実際には移動はめちゃくちゃ大変とありましたが（そりゃそうだ）、夢の店舗兼用・併用住宅の近道になるんじゃないかと思うわけです。
+
+何より「木箱」ステキだし、お店っぽくてお客さんが入りやすい空間がすぐに作れそうじゃないですか？
+
+店舗兼用・併用ならではの＜家庭臭＞がしない。
+
+家庭臭がしないことって大事な気がするんですよね。自分たち自身が売り物になるくらい魅力的ならいいのかもしれんが。
+
+（続く）
+
+<!-- notionvc: 45883667-0429-4fc0-b6ee-f529cafae81e --></div>
+  <div class="post-nav"><a href="demon_modification.html">← 中古物件/自宅改造で飲食店開業？</a><a href="restaurantlocation.html">土地探し～店舗の立地条件 →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>半地下店舗兼用準防火第一種低層狭小住宅 | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="index.html">トップ</a></nav>
+</header>
+<div class="container">
+<section class="category-section">
+<h2 class="category-heading">
+  <a href="categories/introduction.html">1. はじめに</a>
+</h2>
+<ul class="post-list">
+<li class="post-card">
+  <h2><a href="posts/introduction.html">はじめに</a></h2>
+  <div class="post-meta">2024年06月12日 &nbsp; <span class="cat-badge">1. はじめに</span></div>
+  <div class="post-excerpt">はじめのはじめに
+東京都内に住むサラリーマンです。「てんすけち」と名乗ることにします。
+
+ちょっと変わった家づくりをしています。その詳細はおいおい記載していきます。
+が、現在進行形でいろいろ困ってます。同じような境遇にぶち当たった方のために…</div>
+</li>
+</ul>
+</section>
+<section class="category-section">
+<h2 class="category-heading">
+  <a href="categories/mycondition.html">2.条件整理</a>
+</h2>
+<ul class="post-list">
+<li class="post-card">
+  <h2><a href="posts/mycondition.html">家づくりの条件</a></h2>
+  <div class="post-meta">2024年06月12日 &nbsp; <span class="cat-badge">2.条件整理</span></div>
+  <div class="post-excerpt">変わった家づくり、の詳細は以下の通り。
+変わった家づくり、東京都内狭小住宅の詳細は以下の通り。
+
+ 	
+
+ 	東京都内狭小住宅（土地25坪弱）
+ 	第一種低層住宅専用地域
+ 	準防火地域
+ 	半地下室
+ 	店舗（飲食店）兼用住宅
+
+
+
+東京…</div>
+</li>
+</ul>
+</section>
+<section class="category-section">
+<h2 class="category-heading">
+  <a href="categories/journeytofindproperty.html">3.物件探しの旅</a>
+</h2>
+<ul class="post-list">
+<li class="post-card">
+  <h2><a href="posts/houseswithrestaurant.html">店舗兼用/併用住宅を求めて</a></h2>
+  <div class="post-meta">2024年06月12日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
+  <div class="post-excerpt">アラフィフの野望
+これは完全に妻てんすけこの希望というか野望です。将来、飲食店経営に関わっていきたいという長年の野望。将来ってもうあんたもアラフィフよ。
+
+じゃーその第一歩を踏み出せる家にしよう。ということで始まった物件検索。
+
+そんな人ほ…</div>
+</li><li class="post-card">
+  <h2><a href="posts/demon_modification.html">中古物件/自宅改造で飲食店開業？</a></h2>
+  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
+  <div class="post-excerpt">改築で飲食店のハードルは高いのか？
+店舗兼用への道、てことで次に考えたのが③。
+
+子どもが出ていく前提なら自宅部分は2LDKで何とかなります。なので3LDKを買って1部屋を店舗改装すればいいじゃん、という発想ですね。
+
+うーん、もう少し若く…</div>
+</li><li class="post-card">
+  <h2><a href="posts/containerhouse.html">コンテナハウス</a></h2>
+  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
+  <div class="post-excerpt">コンテナハウスで自宅併設？
+もう一回考えるならコンテナハウス併設で考えてみたい。こんなの（住たくeco工房さん「木箱」）。ステキすぎる。
+これならちょっと広い駐車場がある家なら、併設で店舗開業できそう。
+
+[caption id=&quot;atta…</div>
+</li><li class="post-card">
+  <h2><a href="posts/restaurantlocation.html">土地探し～店舗の立地条件</a></h2>
+  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
+  <div class="post-excerpt">店舗ゆえの立地条件
+コンテナ設置できる駐車場のある物件、1階に掃き出し窓があっていい感じにお店導線が作れそうな物件、、、ま、難しいですね。
+都心の家の駐車場なんて、たいていは2階の軒下的なサイズ感。カーポートがあるような平地の駐車場なんて高…</div>
+</li><li class="post-card">
+  <h2><a href="posts/mychoice.html">我が家の土地</a></h2>
+  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
+  <div class="post-excerpt">たどり着いた土地
+こうして行きついた土地は、住まいとして、店舗として、大満足。
+
+ 	東京都23区西部
+ 	地下鉄駅から徒歩2分、中央線・総武線のJRからは徒歩12分（商店街が続いているのであまり遠さは感じないし実際人通りも続いている）
+ …</div>
+</li>
+</ul>
+</section>
+<section class="category-section">
+<h2 class="category-heading">
+  <a href="categories/partnerselection.html">4.建築パートナー選定</a>
+</h2>
+<ul class="post-list">
+<li class="post-card">
+  <h2><a href="posts/post_84.html">おうちづくりパートナー選び</a></h2>
+  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
+  <div class="post-excerpt">土地→パートナー選定
+そもそも土地探しの前にHMを決めるべしという記事を見ましたが、そうなんですかね。
+
+土地の可能性を最大限引き出すことが建築の妙ならば、土地にあった建築パートナーがいるような気がします。
+
+少なくともうちの場合には、立地…</div>
+</li><li class="post-card">
+  <h2><a href="posts/architect.html"># 建築士さん（チクシ・ケンさん）  -</a></h2>
+  <div class="post-meta">2024年06月19日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
+  <div class="post-excerpt">建築士さん（の作品）に一目ぼれ
+コロナ期間中、YouTube等動画閲覧にはまり、サンドウィッチマンの面白さにはまりました。何十回も聞いていると面白さを超え、安心感になり、子守唄を聞くように眠れるようになりました。
+建築士というと、サンドウィ…</div>
+</li><li class="post-card">
+  <h2><a href="posts/housebuilder.html">ハウスビルダーさん（ギンジさん）</a></h2>
+  <div class="post-meta">2024年06月20日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
+  <div class="post-excerpt">地下室を建てられる地元密着のビルダーさん
+ハウスビルダーさんという表現が正しいのかな。
+施工エリアは2区に集中している地域に根差した会社さんで、設計～施工まで一気通貫でやっていらっしゃいます。一つだけですがモデルハウスもあって、いわゆる「工…</div>
+</li><li class="post-card">
+  <h2><a href="posts/housemaker1.html">ハウスメーカーさん　～その1</a></h2>
+  <div class="post-meta">2024年06月21日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
+  <div class="post-excerpt">タウンライフさんを使ってみた
+知名度は低くないと思うが、いわゆる大手ではない。中堅よりは大手より。そんなハウスメーカーさんとの出会いは、「タウンライフ」経由でした。
+
+当初はあまり期待もせず、大外からまくってこられて契約に至ったのです。
+建…</div>
+</li><li class="post-card">
+  <h2><a href="posts/housemaker_2.html">ハウスメーカーさん　～その2（Fチームさん）</a></h2>
+  <div class="post-meta">2024年06月24日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
+  <div class="post-excerpt">Fチームさんとの出会い
+1社だけ、地下室×店舗兼用住宅の難条件に向き合ってくれたのが最終的に決定したハウスメーカーさんです。
+ここではFチームさんとさせていただきましょう。Fの意味は追い追いお話しするかもしれませんが、重要なのはチームである…</div>
+</li><li class="post-card">
+  <h2><a href="posts/photojudgment.html">写真判定</a></h2>
+  <div class="post-meta">2024年06月25日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
+  <div class="post-excerpt">ケツロン
+チクシ・ケンさんに図面を書いてもらって、ギンジさんに地下室と基礎を作ってもらって、ハウスメーカーさんに仕上げと保証をしてもらえたら、と思います。
+
+間違いなく3社ともよかったし、完ぺきではなかったし、だけどそれぞれの利点にマッチす…</div>
+</li><li class="post-card">
+  <h2><a href="posts/backstory_contract.html">裏話　～契約モメモメ</a></h2>
+  <div class="post-meta">2024年06月28日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
+  <div class="post-excerpt">契約まで
+
+Fチームさんとの契約は、でも実はもめました。
+
+まず値引きはしてもらいました。というか先方から提案がありました。
+
+ここまでの経緯を読んでいただけばお分かりの通り、Fチームさんは最後方に位置していました。そのことは正直にお伝えし…</div>
+</li>
+</ul>
+</section>
+<section class="category-section">
+<h2 class="category-heading">
+  <a href="categories/undergrounddungeon.html">5.迷宮～地下室</a>
+</h2>
+<ul class="post-list">
+<li class="post-card">
+  <h2><a href="posts/type_of_undergroundroom.html">いろいろな地下室のあれこれ</a></h2>
+  <div class="post-meta">2024年06月26日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
+  <div class="post-excerpt">そもそも地下室とは。
+一口で地下室といっても色々ありますよ、というお話。
+
+以下、ChatGPTに作らせたっていただいた記事にコメントする形です。はい、ちょっち手抜きです。
+
+
+建築基準法上、地下室とは「建築物の床が地盤面以下に位置する階」…</div>
+</li><li class="post-card">
+  <h2><a href="posts/shelter.html">もう一つの地下室～地下シェルターという選択肢</a></h2>
+  <div class="post-meta">2024年06月27日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
+  <div class="post-excerpt">防災シェルター
+前項で地下室の種類を挙げておきながら、いきなりそのどれでもないお話をしたい。
+
+そう、シェルターである。
+
+不穏な隣国様の活動で、「地下シェルター」の必要性が頭をよぎったことがある人は少なくないのではないか。 東京都がアザブ…</div>
+</li><li class="post-card">
+  <h2><a href="posts/general_estimation.html">地下室お見積もり（教科書編）</a></h2>
+  <div class="post-meta">2024年06月29日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
+  <div class="post-excerpt">10坪の地下室を作るのに何にいくらかかるのか？
+ネットで調べると以下のような項目に分解されて示されていることが多い。
+
+ 	地盤調査（5～30万円）
+
+ 	地下を掘るならボーリング調査は必須と思った方がよさそう。
+
+
+ 	地盤改良（50～3…</div>
+</li><li class="post-card">
+  <h2><a href="posts/real_estimation.html">地下室お見積もり（実際編）</a></h2>
+  <div class="post-meta">2024年06月30日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
+  <div class="post-excerpt">プチ公開。地下室費用
+前項教科書編からの続き。
+
+我が家の地下室はおおよそ5坪の半地下である。
+
+で、1000万円では収まらなかった。坪200万円以上である。（ホントのホントを言えば250近い。ただいろんなものが入っているし、どこまでいって…</div>
+</li><li class="post-card">
+  <h2><a href="posts/non_conformity.html">裏話　～契約不適合責任</a></h2>
+  <div class="post-meta">2024年07月11日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
+  <div class="post-excerpt">土地の売主さんとの契約不適合責任に関する交渉
+実は契約不適合責任について土地の売主さんと若干もめていた。
+
+契約書面上は引き渡しから3か月以内での通知期間になっていて、もちろんそれはわかっていて契約したのだが、当時はまだ着工メドもたっていな…</div>
+</li><li class="post-card">
+  <h2><a href="posts/old_well.html">裏話　～古井戸が出てきた</a></h2>
+  <div class="post-meta">2024年07月12日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
+  <div class="post-excerpt">井戸出現
+基礎工事が始まった初日。Fチームさんから衝撃の連絡が。。。
+
+「古井戸らしきものが出てきました」
+
+真っ白になりかかった頭で、
+
+ 	最悪、そもそも地盤として大丈夫なのか。地下は成立するのか
+ 	撤去費用（あるいは追加の地盤補強工…</div>
+</li><li class="post-card">
+  <h2><a href="posts/entrance_to_basement.html">思ったより深い</a></h2>
+  <div class="post-meta">2024年08月08日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
+  <div class="post-excerpt">地下室の施工進捗。記録用の投稿。
+
+半地下と侮るなかれ、思ったより深い。。井戸も出るわ。
+
+着工～3日後には最深部まで掘って井戸発見。
+
+そこから2週間後。
+これでもすでに地下の基盤部分は埋められた状態。
+
+
+＋1週間でこうなる。
+半地下の…</div>
+</li><li class="post-card">
+  <h2><a href="posts/underground_box.html">地下ボックスでけた</a></h2>
+  <div class="post-meta">2024年08月14日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
+  <div class="post-excerpt">前回の続き
+
+さらに1週間ちょっと。地下というか箱ができた。
+我が家のシェルターだな。
+
+
+
+下部の方にある水色のが断熱材のスタイロフォームかな。
+この子だけでめっちゃ値上がった金食い虫ではある。お値段分だけ働いてくれますように。
+
+と思っ…</div>
+</li>
+</ul>
+</section>
+<section class="category-section">
+<h2 class="category-heading">
+  <a href="categories/openingofrestaurant.html">6.できるか店舗</a>
+</h2>
+<ul class="post-list">
+<li class="post-card">
+  <h2><a href="posts/conditions.html">飲食店の設計条件</a></h2>
+  <div class="post-meta">2024年07月01日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
+  <div class="post-excerpt">飲食店設計に求められること
+ChatGPTにまとめてもらおう。
+
+
+以下に、飲食店開業における法的基準として重要な項目について具体的な基準を挙げます。これらは一般的な指針であり、地域や種類によって詳細な要件が異なる場合がありますので、実際の…</div>
+</li><li class="post-card">
+  <h2><a href="posts/itteisou.html">第一種低層住居専用地域で飲食店</a></h2>
+  <div class="post-meta">2024年07月02日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
+  <div class="post-excerpt">第一種低層住居専用地域の条件
+イッテイソウ、我が家を悩ませるもう一つのテーマがこれだ。
+
+建築基準法でのよりどころはココ。
+
+
+建築基準法第130条の3　第一種低層住居専用地域内に建築することができる兼用住宅
+
+法別表第２(い)項第二号（法…</div>
+</li><li class="post-card">
+  <h2><a href="posts/barrier_free.html">5坪なんですけど…バリアフリー</a></h2>
+  <div class="post-meta">2024年07月08日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
+  <div class="post-excerpt">バリアフリー対応とは
+後述の法令・条例による、バリアフリー対応とは具体的には以下のような内容である。
+
+
+ 	段差解消:
+
+ 	出入口や店内の段差を解消し、スロープを設置する。
+
+
+ 	幅広い通路:
+
+ 	車椅子が通れるように、通路の幅を確…</div>
+</li><li class="post-card">
+  <h2><a href="posts/emergencylights.html">5坪なんですけど…非常用照明</a></h2>
+  <div class="post-meta">2024年07月10日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
+  <div class="post-excerpt">非常用照明や非常口表示板
+バリアフリーの対応ほど大きな費用ではないが、非常用照明や非常口の表示板も店舗には求められる。
+
+根拠法はこんなところのようだ。例によってBy ChatGPT様。
+
+
+ 	建築基準法
+建築基準法は、建物の構造や設備に…</div>
+</li><li class="post-card">
+  <h2><a href="posts/hand_washing_1.html">5坪なんですけど…手洗いの話～1</a></h2>
+  <div class="post-meta">2024年07月14日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
+  <div class="post-excerpt">手洗いとお手洗い
+「手洗い」とは一義的には「手を洗うこと」だろう。しかし、家づくり民からすると、「手を洗う場所」である。その重要パーツとしての「洗面台」を指すこともあるかもしれない。異論は認めない。
+
+さて、先頭に＜お＞が着くと丁寧語になる…</div>
+</li><li class="post-card">
+  <h2><a href="posts/hand_washing_2.html">5坪なんですけど…手洗いの話～2</a></h2>
+  <div class="post-meta">2024年07月15日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
+  <div class="post-excerpt">蛇口問題（続き）
+前項に挙げた厨房内手洗い、シンク×2、お客様用手洗い。ここまでで蛇口は4つとなっている。
+
+しかし飲食店で必要な蛇口はこれにとどまらない。例えば浄水器、製氷機、あるいはスチコンだって水を使う＝蛇口が必要となる。
+
+ここまで…</div>
+</li><li class="post-card">
+  <h2><a href="posts/life_infra.html">ガスと電気と水道と</a></h2>
+  <div class="post-meta">2024年07月18日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
+  <div class="post-excerpt">水光熱費の契約
+水道の話はこちら。飲食店兼用ならではの水栓数問題に悩まされたお話。
+
+そこでもふれたが、手っ取り早いのは、水光熱それぞれについて自宅と店舗とで別々に契約することだ。経費問題に加えて、メンテナンス的にもメリットがある。ただし確…</div>
+</li><li class="post-card">
+  <h2><a href="posts/greasetrap.html">グリーストラップの話</a></h2>
+  <div class="post-meta">2024年09月17日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
+  <div class="post-excerpt">以前にグリーストラップの話を簡単に書いた。その続きであり、備忘メモとしての投稿。
+
+これはなかなか悩みの種。料金もさることながら、床の構造にもかかわる。
+結局我が家は置床式を選択したので、大がかりな工事は不要になった。
+
+と、こんなものを発…</div>
+</li>
+</ul>
+</section>
+<section class="category-section">
+<h2 class="category-heading">
+  <a href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a>
+</h2>
+<ul class="post-list">
+<li class="post-card">
+  <h2><a href="posts/stickingpoint.html">狭小住宅に詰め込んだもの</a></h2>
+  <div class="post-meta">2024年07月03日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
+  <div class="post-excerpt">夫・すけちのこだわり
+&amp;nbsp;
+
+店舗併設が最重要なこだわりとしてあり、かつ、その上で2LDKを最低限必要としたことから地下室問題が発生した。店舗問題と地下室問題がどでかい。
+
+そのうえで、店舗を除く「住居」としてこだわったことを記して…</div>
+</li><li class="post-card">
+  <h2><a href="posts/think_totally.html">「トータル」に考えたい</a></h2>
+  <div class="post-meta">2024年07月04日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
+  <div class="post-excerpt">施主にしか判断できないこと
+前項の続き。大事にしていたことのもう一つが「トータルで考える」こと。それはつまりこんなことだ。
+
+ 	初期費とメンテナンス費のトータルコスト
+ 	本体建築費と外構費のトータルコスト
+ 	性能と費用のバランス
+ 	…</div>
+</li><li class="post-card">
+  <h2><a href="posts/no_margin.html">1マスも無駄にしないお話</a></h2>
+  <div class="post-meta">2024年07月05日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
+  <div class="post-excerpt">我が家の余白
+各部屋、水回り、玄関、それに収納などに活用されているスペースはすべて無駄がないとする。（広すぎるみたいな話はあれどそれは生活スタイルや価値観による）
+
+それ以外のスペースについて洗い出すと、
+
+ 	玄関ホール～ダイニングへの廊…</div>
+</li><li class="post-card">
+  <h2><a href="posts/f_type_aircon.html">F式全館空調は断念</a></h2>
+  <div class="post-meta">2024年07月23日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
+  <div class="post-excerpt">F式全館空調
+玄人はだしとは言うが、家づくりにもとんでもない素人の方がいる。フエッピーさんという方がその一人だ。特に空調についてだが、理論と実践と検証がすさまじい。 これから注文住宅を建てられる方でまだ見ていない人はぜひこちらを。
+
+htt…</div>
+</li><li class="post-card">
+  <h2><a href="posts/kanban.html">閑話休題　新築立て看板</a></h2>
+  <div class="post-meta">2024年07月29日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
+  <div class="post-excerpt">現状ステータス（2024年7月末）
+現在のステータスは本体は基礎工事中である。
+店舗については内装工事等を別契約にしているので、まだ確定していない。
+
+住宅の工夫やこだわりは、地下をはじめ、人並みにあるつもりだが、住んでみないとわからないこ…</div>
+</li><li class="post-card">
+  <h2><a href="posts/grants.html">助成金の話（申請中）</a></h2>
+  <div class="post-meta">2024年08月21日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
+  <div class="post-excerpt">利用した助成金制度
+助成金は使えるものはすべて使いたい。税金は取るほうはきっちりだが、減らしたり取り戻したりするのは極めて不親切な自己責任。ハウスメーカーさんが詳しいものもあれば、そうでもないものもあるようなので、自分でもしっかり調べるべし…</div>
+</li>
+</ul>
+</section>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

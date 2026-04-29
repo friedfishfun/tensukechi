@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>もう一つの地下室～地下シェルターという選択肢 | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>もう一つの地下室～地下シェルターという選択肢</h1>
+  <div class="post-meta">2024年06月27日 &nbsp; <a class="cat-badge" href="../categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+  <div class="post-body"><h2>防災シェルター</h2>
+<a href="https://tensukechi.com/type_of_undergroundroom/">前項</a>で地下室の種類を挙げておきながら、いきなりそのどれでもないお話をしたい。
+
+そう、シェルターである。
+
+不穏な隣国様の活動で、「地下シェルター」の必要性が頭をよぎったことがある人は少なくないのではないか。 東京都がアザブジュバンにシェルター作るみたいな話もありました。
+（人口密度を考えても、通勤者のことを考えても場所がおかしいけど） <a href="https://www3.nhk.or.jp/news/html/20240125/k10014334001000.html">https://www3.nhk.or.jp/news/html/20240125/k10014334001000.html</a>
+
+核爆弾を想定すると2週間引きこもり生活が必要らしい。
+<a href="https://ancarshelter.jp/qa2/">https://ancarshelter.jp/qa2/</a>
+意外に短いような気もするが、あのトキは2週間耐えたのだろうか。
+
+アンカーシェルターさん凄いホームページの充実ぶり。ただ防災シェルターが主で、居住スペースが従だと思われる。ここでご紹介するのはあくまで居住スペースとしての地下シェルターを売り出しているサンヨーホームズさんだ。
+<h2>サンヨーホームズさんの地下シェルター</h2>
+商品名はマルチシェルター（MultiShelter）。ここで語るより、ホームページを見ていただいた方が早い。
+
+<a href="https://www.sanyohomes.co.jp/house/m-shelter/">https://www.sanyohomes.co.jp/house/m-shelter/</a>
+
+完全地下室にしろ、半地下室にしろ、おそらく深基礎にしろ、従来からの地下室は、地面を掘ったうえで周囲の土が流れてこないように土留（どどめ）をして空間を確保する。
+しかし、このMultiShelterではこのイメージ絵を見る限り土留をしていないんじゃないか？その代わりに鋼鉄の箱を直接地下に設置しているように見える。
+
+<a href="https://www.sanyohomes.co.jp/house/m-shelter/images/image41.png"><img src="https://www.sanyohomes.co.jp/house/m-shelter/images/image41.png" alt="サンヨーホームズさんホームページより" width="517" height="363" /></a> サンヨーホームズさんホームページより
+
+この施工法で考えられるメリットを妄想するに、
+<ul>
+ 	<li>土留にかかる費用と工期の削減</li>
+ 	<li>量産できるようになれば建物（箱）自体も価格を抑えられる。プレハブ化だ</li>
+ 	<li>私がめちゃくちゃ悩んだ施工会社の技術力のばらつき（の恐れ）から解放された安定品質</li>
+ 	<li>施工日の天候によりコンクリートの出来不出来が大きく変わる運不運</li>
+ 	<li>コンクリートが乾くまでの年単位での湿気の悩みから解放</li>
+</ul>
+といったところか。もっとあるかもしれない。革命的だ。
+工期メリットはわかりやすく、我が家の半地下で2～3か月かかりそうだが、MultiShelterでは2週間という触れ込みだ。
+<a href="https://newswitch.jp/p/24654">https://newswitch.jp/p/24654</a>
+
+実際、サンヨーホームズさんには接触を図らせていただき、丁寧にご対応いただいた。
+
+残念ながら現時点では「価格」による差別化は図られていない（できていない）ようで、検討中の3社とその点で横並び比較することはできなかった。 （地下だけでなく上物も含めた価格感。ただ結果的に落ち着いた価格を考えると、選択肢になったのかもしれない）
+
+おそらく価格がネックで、まだそこまで普及しているわけではない。特殊な工法なので、自治体との調整も必要なようだ。このあたり普及につれて加速度的に変わっていくのだとは思うが、少し時間がかかるようにも感じた。
+<h2>シェルター方式～今後への期待</h2>
+それでも地下シェルターはきっともっと普及していくと思う。その時、上記に掲げたメリットは大きい。
+
+特にサンヨーホームズさんのMulti-Shelterは、防災用ではなく、居住スペースとしての快適性を追求しているので、当たり前だが<a href="https://tensukechi.com/type_of_undergroundroom/#i-2">地下室本来のメリット</a>が享受できる。完全地下でもドライエリア付きでもOKとのこと。
+
+おうちづくりはツーバイフォー工法をきっかけに工場生産＝量産化が進んで、在来工法の職人さん依存から劇的に変わったとされる。
+同様に、地下室が量産化されるならこのシェルター埋め込み方式一択なんじゃないかと思った。そうなれば価格面も下がり、家を建てるならシェルターは当たり前、の時代がくるのかもしれない。おそらくその背景にあるのは政情不安というところが悲しいが。
+
+今後に期待である。
+
+※なお、地下シェルター方式にはもう少し裏話があるが、これは別のところで。
+
+<!-- notionvc: d8b734d8-f897-4be3-ac41-85ce6c74ee9e --></div>
+  <div class="post-nav"><a href="type_of_undergroundroom.html">← いろいろな地下室のあれこれ</a><a href="backstory_contract.html">裏話　～契約モメモメ →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

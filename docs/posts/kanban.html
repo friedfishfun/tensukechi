@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>閑話休題　新築立て看板 | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>閑話休題　新築立て看板</h1>
+  <div class="post-meta">2024年07月29日 &nbsp; <a class="cat-badge" href="../categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+  <div class="post-body"><h2>現状ステータス（2024年7月末）</h2>
+現在のステータスは本体は基礎工事中である。
+店舗については内装工事等を別契約にしているので、まだ確定していない。
+
+住宅の工夫やこだわりは、地下をはじめ、人並みにあるつもりだが、住んでみないとわからないことが多くて現段階で記事にしづらい。
+
+ということで、若干ネタ切れでの投稿。記録目的を兼ねつつ。
+<h2>新築工事の立て看板</h2>
+ということで立て看板の話だが、実にわかりやすくおまとめされているブログを発見した。
+
+<a href="https://www.housing-industry-news.com/articles/463">工事現場の看板設置は義務？罰則はある？ | ハウジングインダストリー (housing-industry-news.com)</a>
+
+調べて、ここで共有したかったことの9割はここに書かれているので、書くことがなくなった。こちとらネタ切れなのに。。。
+
+一部だけ引用させていただくと、正式には「建築確認表示板」っていうのが義務のようですね。罰則もあるとか、恐ろしや。
+必ずしも新築工事に限らないらしいので、もしDIYでウッドハウス作りとか、あるいは外構工事だけだとしても考えている方。表示が必要になる場合があるっぽいので注意ですね～。
+<h2>施主個人名は伏せられるのか</h2>
+建築中の立て看板に施主個人名を入れたくないという人は多いのではないだろうか。その点は上記ブログにはなかったので書いておきたい。
+
+が、調べてもわからーん。<span style="font-size: 17px;">たぶんだが</span>
+<ul>
+ 	<li>法的には個人名を書く義務がある</li>
+ 	<li>慣例では省略しているケースが多発。ハウスメーカーさんが対応してくれるケースは多そう</li>
+</ul>
+ではないだろうか。
+
+全社はこんな感じ。
+<a href="https://question.realestate.yahoo.co.jp/knowledge/chiebukuro/detail/1071721615/">新築住宅にかける現場看板に施主の名前は掲げないといけないのでしょうか？ - 教えて！住まいの先生 - Yahoo!不動産</a>
+
+しかし、省略してよいという法的根拠を示す事例は見つけられなかった。Bing Copilotさんは「できる」と返事してくれるが、その根拠は上記Yahoo!掲示板である。
+むしろ、明確にできないと書いている例はたくさんある。
+<a href="https://www.city.bunkyo.lg.jp/b033/p004708.html">工事現場における確認看板の表示について | 文京区 (bunkyo.lg.jp)</a>
+『氏名は略さず表示してください』とこんだけ明示されてますけど。。。
+
+ただし、上記文京区のリンクの先にこのフォーマットがある。
+<a href="https://www.city.bunkyo.lg.jp/documents/4534/2023614144212.pdf">2023614144212.pdf (bunkyo.lg.jp)</a>
+これが建築基準法上のフォーマットのようだ。
+
+つまり、表示板のサイズは「25センチ×35センチ」がミニマムで認められるということだ。
+<h2>たぶん結論</h2>
+これを踏まえた結論（私なりの解釈。ちがったらごめんて）は、
+<ul>
+ 	<li>法的に建築主の氏名を略さず記載する義務がある</li>
+ 	<li>ハウスメーカーは空白で認めてくれるケースがありそうだが、それだけだと厳密には法律違反になりかねない</li>
+ 	<li>役所に相談しに行ったら特例で認められるということはなく、むしろ藪蛇リスクが高い</li>
+ 	<li>法令順守と両立するならば。立て看板は空白にしておいて、別途25センチ×35センチの表示をしておけば大丈夫。そこに名前を書く義務はあるが、サイズ感は全然違う</li>
+</ul>
+ということかと考えました。
+
+さて工事開始から1か月もたっていないのだが、なんと知り合いから連絡がきた。看板を見たと。。。世の中狭すぎる。
+
+※ちなみに表札は義務じゃないっぽい。</div>
+  <div class="post-nav"><a href="f_type_aircon.html">← F式全館空調は断念</a><a href="entrance_to_basement.html">思ったより深い →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

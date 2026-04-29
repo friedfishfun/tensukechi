@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>写真判定 | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>写真判定</h1>
+  <div class="post-meta">2024年06月25日 &nbsp; <a class="cat-badge" href="../categories/partnerselection.html">4.建築パートナー選定</a></div>
+  <div class="post-body"><h2>ケツロン</h2>
+チクシ・ケンさんに図面を書いてもらって、ギンジさんに地下室と基礎を作ってもらって、ハウスメーカーさんに仕上げと保証をしてもらえたら、と思います。
+
+間違いなく3社ともよかったし、完ぺきではなかったし、だけどそれぞれの利点にマッチする人にはぜひオススメできます。
+
+チクシさんの家、ギンジさんの家、建ててみたかったです。
+<h2>相見積もりをする</h2>
+判定に入る前にやろうとしたのは、見積もりの比較です。これはどこかで公開したいと思います。
+
+何が大変かというと、項目が三者三様で比較のしようがないということ。
+これを大きいくくりでまとめたり、空白（ある会社では見積もっているが、ほかの会社では考慮されていない）を明確にしていくことです。
+
+やって分かったのは、まず各社の見積もりにはそれぞれ穴があるということ。
+悪気なんて（安く見せようなんて）ないと思うんですが、外構が漏れていたり、諸経費が漏れていたり、店舗厨房が不明だったり。あるいは幹太くんが入っていたり、スケルトン階段がめっちゃ高かったりというのもわかります。
+今回の3社はあまり差異がなかったんですが、住設のグレードの違いも見えてくるし、いい思考訓練になるでしょう。
+
+そして、もう一つ分かったのは、それらの三者三様の穴を埋めていくと、トータルコストはほとんど変わらなかったということ。
+
+結果的に、コスト比較という要素から解放されただけでなく、この特殊仕様の相場感から大きく外れていることはないという確信を得ることができたわけです。
+<h2>パフォーマンスを比較する</h2>
+パフォーマンス比較はこれまた優劣つけがたいものでした。
+<table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th style="width: 16.3059%;"></th>
+<th style="width: 14.2857%;">地下室の安心</th>
+<th style="width: 16.3059%;">店舗設計の安心</th>
+<th style="width: 16.3059%;">デザイン斬新さ</th>
+<th style="width: 16.3059%;">デザイン安心感</th>
+<th style="width: 14.2857%;">家の基本性能</th>
+<th style="width: 5.91631%;">保証</th>
+</tr>
+<tr>
+<td style="width: 16.3059%;">チクシ・ケン</td>
+<td style="width: 14.2857%;">△</td>
+<td style="width: 16.3059%;">△</td>
+<td style="width: 16.3059%;">◎</td>
+<td style="width: 16.3059%;">〇</td>
+<td style="width: 14.2857%;">△</td>
+<td style="width: 5.91631%;">×</td>
+</tr>
+<tr>
+<td style="width: 16.3059%;">ギンジ</td>
+<td style="width: 14.2857%;">◎</td>
+<td style="width: 16.3059%;">×</td>
+<td style="width: 16.3059%;">×</td>
+<td style="width: 16.3059%;">△</td>
+<td style="width: 14.2857%;">◎</td>
+<td style="width: 5.91631%;">△</td>
+</tr>
+<tr>
+<td style="width: 16.3059%;">ハウスメーカー</td>
+<td style="width: 14.2857%;">〇</td>
+<td style="width: 16.3059%;">〇</td>
+<td style="width: 16.3059%;">△</td>
+<td style="width: 16.3059%;">〇</td>
+<td style="width: 14.2857%;">〇</td>
+<td style="width: 5.91631%;">〇</td>
+</tr>
+</tbody>
+</table>
+並べるとそつないハウスメーカーさんが優勢に見える。実際にそう決めたわけですが、もっと悩みました。それは「◎」の魅力の高さよ。
+<h2>敬意と未練と　～チクシ・ケンさん</h2>
+何度も言うけど、チクシ・ケンさんのデザインは飛び抜けていました。不動産会社さん曰く、ご紹介して採用しなかった人はいない。というのは盛り過ぎかと思うけど、本当なのかも。
+
+特に吹き抜けとか、スケルトン階段とか、光庭とか、そしてなんといってもスキップフロアですね。ステキ。部分ではデザインに強い大手さんでもできるのでしょうが、トータルでできる自由設計力はどうなんでしょう。
+
+これが最大発揮されるのは難易度の高い土地の時なんだと思うし、そう仰っていました。今回、土地自体はクセがないけど、狭小に地下室みたいな条件はたぶん本領発揮するに十分な条件だったでしょう。
+
+ただ一方で、スキップフロアのような階段の多いデザインは70歳、80歳になった時不安ではあります。もちろん図面修正していただくことはできたし、また新たなマジックを見ることができたでしょう。
+ですが、そうやって住み心地というか安心感みたいな要素を高めていくと、どんどんチクシさんの良さが失われていくような気がして。
+
+あとは施工側ですね。もちろん信頼できる人をご紹介いただいていたのだとは思う。でも地下室実績が豊富なわけでもなく、良くも悪くも一人親方のような会社さんで何かあった時の不安はぬぐえず。
+
+でもでも、それでも、自分が30代だったらチクシ・ケンさんと一緒に攻めた家づくりをしたように思います。
+<h2>敬意と未練と　～ギンジさん</h2>
+ギンジさんの可能性もありました。
+
+後々まとめていく地下室の難しさよ。調べても調べてもわからないことだらけの中で、断トツの実績に惹かれるものは大いにありました。
+他の諸条件、店舗とかそういうのがなければ、もっと悩んで、ギンジさんに賭けていた可能性もあります。
+
+ただ、ちょっとデザイン力に不安を感じたのと、価格透明性に疑問を持ってしまった。
+
+途中から、ご提案されているというより、自分で図面引いているような感覚になってしまったんですよね。それはそれで楽しいんですが、否定されるべきところは否定していただかないと困るわけで、そういうコミュニケーションができるかわからなかった。
+
+とはいえ、契約して、営業ではなく設計側の方と会話が始まれば不安は払しょくされたようにも思う。
+価格もね。どんぶり感が否めなかったんですが、これも施主力不足だったかもしれない。今思うと、住宅の価格をクリアカットに説明する難しさはわかる。
+
+なんで、お断りはしたけど、決してダメじゃなかったと確信もしている。施主力高い人、地下室以外のつくりはシンプルでよい人、それより性能重視な人にはオススメしたい。
+<h2>3社比較から見えたもの</h2>
+こんな思考を経て見えてきたのは、三社それぞれの評価というよりはむしろ自分自身の価値観だったかもしれない。
+
+家づくりに対して自分自身が、なんというか保守的なところがあった。
+
+その価値観に則って、評価軸自体の優先度がついたとき、家づくりのパートナーはハウスメーカーさんに決定したということなんだと思う。
+<table id="f1edb840-4713-4cae-b63f-1a2762e64eb7" class="simple-table">
+<tbody>
+<tr id="55e7d866-b2cc-4866-a8ec-5f5959c25fdf">
+<td id="\[=O" class=""></td>
+<td id="s{&gt;{" class="">地下室の安心</td>
+<td id="]~Kk" class="">店舗設計の安心</td>
+<td id="@~Y|" class="">デザイン斬新さ</td>
+<td id="E}xt" class="">デザイン安心感</td>
+<td id="rjuD" class="">家の基本性能</td>
+<td id="Z?^A" class="">保証</td>
+</tr>
+<tr id="f4cb5184-d74b-4214-9ec8-6cc6e75d3e9d">
+<td id="\[=O" class="">評価優先度</td>
+<td id="s{&gt;{" class="">1</td>
+<td id="]~Kk" class="">2</td>
+<td id="@~Y|" class="">6</td>
+<td id="E}xt" class="">5</td>
+<td id="rjuD" class="">3</td>
+<td id="Z?^A" class="">4</td>
+</tr>
+<tr id="46f3d0fb-1e77-410c-933b-53e9e0a6426a">
+<td id="\[=O" class="">チクシ・ケン</td>
+<td id="s{&gt;{" class="">△</td>
+<td id="]~Kk" class="">△</td>
+<td id="@~Y|" class="">◎</td>
+<td id="E}xt" class="">〇</td>
+<td id="rjuD" class="">△</td>
+<td id="Z?^A" class="">×</td>
+</tr>
+<tr id="318f634e-7e75-4f08-bcdb-1ffc2ffac7af">
+<td id="\[=O" class="">ギンジ</td>
+<td id="s{&gt;{" class="">◎</td>
+<td id="]~Kk" class="">×</td>
+<td id="@~Y|" class="">×</td>
+<td id="E}xt" class="">△</td>
+<td id="rjuD" class="">◎</td>
+<td id="Z?^A" class="">△</td>
+</tr>
+<tr id="4be8f79b-d88d-454c-946c-de5532d7954c">
+<td id="\[=O" class="">ハウスメーカー</td>
+<td id="s{&gt;{" class="">〇</td>
+<td id="]~Kk" class="">〇</td>
+<td id="@~Y|" class="">△</td>
+<td id="E}xt" class="">〇</td>
+<td id="rjuD" class="">〇</td>
+<td id="Z?^A" class="">〇</td>
+</tr>
+</tbody>
+</table>
+こんな感じで決着がついたということです。
+
+<!-- notionvc: d884143e-f695-4c9f-a88f-9e933739ce6e --></div>
+  <div class="post-nav"><a href="housemaker_2.html">← ハウスメーカーさん　～その2（Fチームさん）</a><a href="type_of_undergroundroom.html">いろいろな地下室のあれこれ →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

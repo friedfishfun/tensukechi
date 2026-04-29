@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.狭小住宅でのチャレンジ | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<h1 class="page-heading">7.狭小住宅でのチャレンジ</h1>
+<ul class="post-list">
+<li class="post-card">
+  <h2><a href="../posts/stickingpoint.html">狭小住宅に詰め込んだもの</a></h2>
+  <div class="post-meta">2024年07月03日</div>
+  <div class="post-excerpt">夫・すけちのこだわり
+&amp;nbsp;
+
+店舗併設が最重要なこだわりとしてあり、かつ、その上で2LDKを最低限必要としたことから地下室問題が発生した。店舗問題と地下室問題がどでかい。
+
+そのうえで、店舗を除く「住居」としてこだわったことを記して…</div>
+</li><li class="post-card">
+  <h2><a href="../posts/think_totally.html">「トータル」に考えたい</a></h2>
+  <div class="post-meta">2024年07月04日</div>
+  <div class="post-excerpt">施主にしか判断できないこと
+前項の続き。大事にしていたことのもう一つが「トータルで考える」こと。それはつまりこんなことだ。
+
+ 	初期費とメンテナンス費のトータルコスト
+ 	本体建築費と外構費のトータルコスト
+ 	性能と費用のバランス
+ 	…</div>
+</li><li class="post-card">
+  <h2><a href="../posts/no_margin.html">1マスも無駄にしないお話</a></h2>
+  <div class="post-meta">2024年07月05日</div>
+  <div class="post-excerpt">我が家の余白
+各部屋、水回り、玄関、それに収納などに活用されているスペースはすべて無駄がないとする。（広すぎるみたいな話はあれどそれは生活スタイルや価値観による）
+
+それ以外のスペースについて洗い出すと、
+
+ 	玄関ホール～ダイニングへの廊…</div>
+</li><li class="post-card">
+  <h2><a href="../posts/f_type_aircon.html">F式全館空調は断念</a></h2>
+  <div class="post-meta">2024年07月23日</div>
+  <div class="post-excerpt">F式全館空調
+玄人はだしとは言うが、家づくりにもとんでもない素人の方がいる。フエッピーさんという方がその一人だ。特に空調についてだが、理論と実践と検証がすさまじい。 これから注文住宅を建てられる方でまだ見ていない人はぜひこちらを。
+
+htt…</div>
+</li><li class="post-card">
+  <h2><a href="../posts/kanban.html">閑話休題　新築立て看板</a></h2>
+  <div class="post-meta">2024年07月29日</div>
+  <div class="post-excerpt">現状ステータス（2024年7月末）
+現在のステータスは本体は基礎工事中である。
+店舗については内装工事等を別契約にしているので、まだ確定していない。
+
+住宅の工夫やこだわりは、地下をはじめ、人並みにあるつもりだが、住んでみないとわからないこ…</div>
+</li><li class="post-card">
+  <h2><a href="../posts/grants.html">助成金の話（申請中）</a></h2>
+  <div class="post-meta">2024年08月21日</div>
+  <div class="post-excerpt">利用した助成金制度
+助成金は使えるものはすべて使いたい。税金は取るほうはきっちりだが、減らしたり取り戻したりするのは極めて不親切な自己責任。ハウスメーカーさんが詳しいものもあれば、そうでもないものもあるようなので、自分でもしっかり調べるべし…</div>
+</li>
+</ul>
+<div class="back-to-list"><a href="../index.html">← トップに戻る</a></div>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

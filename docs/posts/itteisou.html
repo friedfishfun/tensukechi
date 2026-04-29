@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第一種低層住居専用地域で飲食店 | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>第一種低層住居専用地域で飲食店</h1>
+  <div class="post-meta">2024年07月02日 &nbsp; <a class="cat-badge" href="../categories/openingofrestaurant.html">6.できるか店舗</a></div>
+  <div class="post-body"><h2>第一種低層住居専用地域の条件</h2>
+イッテイソウ、我が家を悩ませるもう一つのテーマがこれだ。
+
+建築基準法でのよりどころはココ。
+<div class="inyoumodoki">
+
+<strong>建築基準法第130条の3　第一種低層住居専用地域内に建築することができる兼用住宅</strong>
+
+法別表第２(い)項第二号（法第８７条第２項又は第３項において法第４８条第１項の規定を準用する場合を含む。）の規定により政令で定める住宅は、延べ面積の1/2以上を居住の用に供し、かつ、次の各号の一に掲げる用途を兼ねるもの（これらの用途に供する部分の床面積の合計が50m2を超えるものを除く。）とする。
+
+二　日用品の販売を主たる目的とする店舗又は食堂若しくは喫茶店
+
+五　自家販売のために食品製造業（食品加工業を含む。第１３０条の５の２第四号及び第１３０条の６において同じ。）を営むパン屋、米屋、豆腐屋、菓子屋その他これらに類するもの（原動機を使用する場合にあっては、その出力の合計が0.75kw以下のものに限る。）
+
+</div>
+まとめると
+<ol>
+ 	<li>床面積は50平米以下であること</li>
+ 	<li>床面積半分以上は居住用での店舗「兼用住宅」であること</li>
+ 	<li>日用品の販売を目的とした食堂、または大規模設備を伴わないような食品製造・加工業であること</li>
+</ol>
+床面積は安心しろ、狭小住宅だ。
+<h2>兼用住宅</h2>
+「兼用住宅」はよくて、「併用住宅」はだめ。これは言い換えると、店舗と住宅が内部的につながっている必要があるということ。
+
+なんのために？って思うのだが。これは、第一種低層住居専用地域では原則としてはむしろ店舗は建てられない、ということなんでしょう。例外的に住居の中で、ちょっと販売するくらいならいいよ、という例外事項が建前なんだと思いました。
+
+でも実質的には無意味だと思うけど。
+
+ちなみに、もし併用でよかったら。我が家の場合は店舗が1.5階部分なので、自宅と行き来するところには内階段がある。この階段と、ドアがいらなくなったので、1マスのスペースと30万くらいが割愛できたことになる。
+<h2>日用品の販売を目的とした食堂</h2>
+正直、これがいまだにわからない。一応、お店でやりたいことは保健所等にも一度は話していて、何も文句は言われていない。のでできると信じている。
+
+一般的には、例えば蕎麦屋はOKっぽい。高級フレンチはどうなんだ？わからない。
+
+お酒の提供ができるかどうか、これもわからない。どうやら夜20時以降はNGっぽい？のと、居酒屋はNGっぽい。酒の提供がメインになると「日用品」じゃないらしい。 けど、蕎麦屋でビールを提供するのはOKらしい。 てか、酒販免許を取って酒屋さんをやるのはどうなんだろう。日用品？
+
+これに限らないけど結局地域の所管機関、あるいはその担当者の胸三寸みたいな話が多すぎる。
+
+あと本音と建て前みたいな話もあるとかないとか。だから聞くに聞けないところもある。グレーゾーン解消制度みたいなのを使った日には、違反認定が続出したりするんじゃないかな。
+
+東京都？では、第一種低層住居専用地域でのコンビニ開設は許可されるようになったと聞いている。ご高齢の方の利便性を高める目的とか。そういう意味では緩和の方向に向かっていると信じたい。
+
+不安ながら突っ走ってみるしかない。
+
+<img class="size-medium wp-image-150" src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-02-09.16.12-A-hand-drawn-style-illustration-of-a-very-narrow-restaurant-in-a-small-cozy-space.-The-scene-includes-compact-seating-a-small-kitchen-area-and-a-wa-300x300.webp" alt="" width="300" height="300" /> とてもとても小さな飲食店（DALL-E作成）　
+
+こんな広くありません。。。
+
+<!-- notionvc: 7656c782-0bf3-4b45-8b77-b9be0ed43bbf --></div>
+  <div class="post-nav"><a href="conditions.html">← 飲食店の設計条件</a><a href="stickingpoint.html">狭小住宅に詰め込んだもの →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

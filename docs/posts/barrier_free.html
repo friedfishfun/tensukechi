@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5坪なんですけど…バリアフリー | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <style>
+:root {
+  --bg: #fafaf8;
+  --text: #2d2d2d;
+  --muted: #666;
+  --accent: #5c6bc0;
+  --accent-light: #e8eaf6;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --max-w: 860px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+}
+header a { color: #fff; }
+.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
+.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
+.site-nav a { margin-right: 1rem; color: #fff; }
+
+/* メインレイアウト */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 記事カード（一覧） */
+.post-list { list-style: none; }
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.93rem; color: #444; }
+.cat-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* カテゴリーセクション見出し */
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+.category-heading a { color: inherit; }
+
+/* 記事本文 */
+article.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+}
+article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
+article.post .post-meta { margin-bottom: 1.5rem; }
+.post-body { margin-top: 1.5rem; }
+.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-body li { margin-bottom: 0.4rem; }
+.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+.post-body th { background: var(--accent-light); }
+
+/* ナビゲーション */
+.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.post-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.back-to-list { margin-top: 1.5rem; }
+
+/* カテゴリーページ */
+.page-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  article.post { padding: 1.2rem 1rem; }
+  .container { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+</header>
+<div class="container">
+<article class="post">
+  <h1>5坪なんですけど…バリアフリー</h1>
+  <div class="post-meta">2024年07月08日 &nbsp; <a class="cat-badge" href="../categories/openingofrestaurant.html">6.できるか店舗</a></div>
+  <div class="post-body"><h2>バリアフリー対応とは</h2>
+後述の法令・条例による、バリアフリー対応とは具体的には以下のような内容である。
+<div class="graybox">
+<ol>
+ 	<li><strong>段差解消</strong>:
+<ul>
+ 	<li>出入口や店内の段差を解消し、スロープを設置する。</li>
+</ul>
+</li>
+ 	<li><strong>幅広い通路</strong>:
+<ul>
+ 	<li>車椅子が通れるように、通路の幅を確保する。</li>
+</ul>
+</li>
+ 	<li><strong>多目的トイレの設置</strong>:
+<ul>
+ 	<li>スペースが許す限り、多目的トイレを設置する。</li>
+</ul>
+</li>
+ 	<li><strong>カウンターの高さ</strong>:
+<ul>
+ 	<li>車椅子利用者が利用しやすいように、カウンターの高さを調整する。</li>
+</ul>
+</li>
+ 	<li><strong>案内表示の工夫</strong>:
+<ul>
+ 	<li>視覚や聴覚に障害のある方に配慮した案内表示を設置する。</li>
+</ul>
+</li>
+ 	<li><strong>スタッフの教育</strong>:
+<ul>
+ 	<li>バリアフリーに対する理解を深め、適切に対応できるようにスタッフを教育する。</li>
+</ul>
+</li>
+</ol>
+</div>
+これ、「気を付けましょう」という意味ではとてもよくわかる。公共の施設ならぜひそうあるべきだろう。
+
+ただ、自宅兼用住宅の5坪の店舗でとなるとめちゃくちゃ大変である。スロープでも設置しようものならすごいスペースを食う。
+
+仮に2階に店舗があって、階段＋スロープの設置に必要な土地面積をChatGPTに試算していただいたところ、46.8平米と答えが出ました。ほんとか？ちと大きすぎる気がするが、事実なら我が地の半分以上を占める。。。もはや家ではなく、スロープ、上り坂だ。
+<h2>バリアフリー関連の法令・条例</h2>
+とはいえ法令・条例は無視できず。根拠はこのあたりとなるようだ。
+<div class="graybox">
+<h3>バリアフリー法（高齢者、障害者等の移動等の円滑化の促進に関する法律）</h3>
+<strong>国土交通省管轄。ただ</strong>バリアフリー法は主に大規模な公共施設や商業施設に適用されるため、小規模な飲食店には直接適用されないもよう。
+<h3>建築基準法</h3>
+<strong>同じく国土交通省。規模が大きい店舗だと、この中で多目的トイレの設置が求められる模様。出入口の段差解消もうたわれている。</strong>
+<h3>地方自治体の条例</h3>
+<strong>東京都のバリアフリー条例</strong>:
+東京都では「東京都福祉のまちづくり条例」があり、公共施設や商業施設のバリアフリー化を推進しています。具体的な要件は施設の規模や用途によって異なりますが、小規模店舗でも段差の解消やトイレのバリアフリー化が推奨されることがあります。
+
+</div>
+どうやら東京都の条例が今回のケースでは該当するっぽい。
+<h2>我が家の対策</h2>
+結論、階段部分を広くすることに対応することになった。スロープはご容赦いただいたが、介助者が介助するに必要な幅を確保せい、ということだ。
+
+その幅120センチ。
+結構な幅だよなぁ。。。 幸い土地にまだ余白があったので何とかなりました。
+
+それ以外のところはごく小規模ということで、設計士さんがネゴってくれたようで助かった。（トイレは従業員用ということで許されたが、多目的トイレとか本気で言ってきたんだとするとゾッとする。。。）
+
+ただこれ、建築確認申請時のやり取りなんですよね。恐ろしすぎる。
+<h2>改築により兼用店舗を作るなら</h2>
+階段の幅とか、現実的に改築時にはムリだろう。
+
+ケースバイケースでご相談するしかないというのが結論のよう。
+
+ただ、、、逆に新築時ならできるというのは理解するが、しかしなんか新築店舗に厳しくないか？不公平感がある。
+
+ぶつぶつ。。
+
+<!-- notionvc: 312e943b-bd61-487c-83d6-7e7140c260d2 --></div>
+  <div class="post-nav"><a href="no_margin.html">← 1マスも無駄にしないお話</a><a href="emergencylights.html">5坪なんですけど…非常用照明 →</a></div>
+  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
+</article>
+</div>
+<footer>
+  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+</footer>
+</body>
+</html>

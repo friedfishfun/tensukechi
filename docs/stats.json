@@ -1,0 +1,219 @@
+{
+  "total_posts": 36,
+  "categories": {
+    "introduction": {
+      "name": "1. はじめに",
+      "count": 1
+    },
+    "mycondition": {
+      "name": "2.条件整理",
+      "count": 1
+    },
+    "journeytofindproperty": {
+      "name": "3.物件探しの旅",
+      "count": 5
+    },
+    "partnerselection": {
+      "name": "4.建築パートナー選定",
+      "count": 7
+    },
+    "undergrounddungeon": {
+      "name": "5.迷宮～地下室",
+      "count": 8
+    },
+    "openingofrestaurant": {
+      "name": "6.できるか店舗",
+      "count": 8
+    },
+    "narrow_house": {
+      "name": "7.狭小住宅でのチャレンジ",
+      "count": 6
+    },
+    "uncategorized": {
+      "name": "未分類",
+      "count": 0
+    }
+  },
+  "posts": [
+    {
+      "title": "はじめに",
+      "slug": "introduction",
+      "date": "2024年06月12日"
+    },
+    {
+      "title": "家づくりの条件",
+      "slug": "mycondition",
+      "date": "2024年06月12日"
+    },
+    {
+      "title": "店舗兼用/併用住宅を求めて",
+      "slug": "houseswithrestaurant",
+      "date": "2024年06月12日"
+    },
+    {
+      "title": "中古物件/自宅改造で飲食店開業？",
+      "slug": "demon_modification",
+      "date": "2024年06月14日"
+    },
+    {
+      "title": "コンテナハウス",
+      "slug": "containerhouse",
+      "date": "2024年06月14日"
+    },
+    {
+      "title": "土地探し～店舗の立地条件",
+      "slug": "restaurantlocation",
+      "date": "2024年06月14日"
+    },
+    {
+      "title": "我が家の土地",
+      "slug": "mychoice",
+      "date": "2024年06月14日"
+    },
+    {
+      "title": "おうちづくりパートナー選び",
+      "slug": "post_84",
+      "date": "2024年06月14日"
+    },
+    {
+      "title": "# 建築士さん（チクシ・ケンさん）  -",
+      "slug": "architect",
+      "date": "2024年06月19日"
+    },
+    {
+      "title": "ハウスビルダーさん（ギンジさん）",
+      "slug": "housebuilder",
+      "date": "2024年06月20日"
+    },
+    {
+      "title": "ハウスメーカーさん　～その1",
+      "slug": "housemaker1",
+      "date": "2024年06月21日"
+    },
+    {
+      "title": "ハウスメーカーさん　～その2（Fチームさん）",
+      "slug": "housemaker_2",
+      "date": "2024年06月24日"
+    },
+    {
+      "title": "写真判定",
+      "slug": "photojudgment",
+      "date": "2024年06月25日"
+    },
+    {
+      "title": "いろいろな地下室のあれこれ",
+      "slug": "type_of_undergroundroom",
+      "date": "2024年06月26日"
+    },
+    {
+      "title": "もう一つの地下室～地下シェルターという選択肢",
+      "slug": "shelter",
+      "date": "2024年06月27日"
+    },
+    {
+      "title": "裏話　～契約モメモメ",
+      "slug": "backstory_contract",
+      "date": "2024年06月28日"
+    },
+    {
+      "title": "地下室お見積もり（教科書編）",
+      "slug": "general_estimation",
+      "date": "2024年06月29日"
+    },
+    {
+      "title": "地下室お見積もり（実際編）",
+      "slug": "real_estimation",
+      "date": "2024年06月30日"
+    },
+    {
+      "title": "飲食店の設計条件",
+      "slug": "conditions",
+      "date": "2024年07月01日"
+    },
+    {
+      "title": "第一種低層住居専用地域で飲食店",
+      "slug": "itteisou",
+      "date": "2024年07月02日"
+    },
+    {
+      "title": "狭小住宅に詰め込んだもの",
+      "slug": "stickingpoint",
+      "date": "2024年07月03日"
+    },
+    {
+      "title": "「トータル」に考えたい",
+      "slug": "think_totally",
+      "date": "2024年07月04日"
+    },
+    {
+      "title": "1マスも無駄にしないお話",
+      "slug": "no_margin",
+      "date": "2024年07月05日"
+    },
+    {
+      "title": "5坪なんですけど…バリアフリー",
+      "slug": "barrier_free",
+      "date": "2024年07月08日"
+    },
+    {
+      "title": "5坪なんですけど…非常用照明",
+      "slug": "emergencylights",
+      "date": "2024年07月10日"
+    },
+    {
+      "title": "裏話　～契約不適合責任",
+      "slug": "non_conformity",
+      "date": "2024年07月11日"
+    },
+    {
+      "title": "裏話　～古井戸が出てきた",
+      "slug": "old_well",
+      "date": "2024年07月12日"
+    },
+    {
+      "title": "5坪なんですけど…手洗いの話～1",
+      "slug": "hand_washing_1",
+      "date": "2024年07月14日"
+    },
+    {
+      "title": "5坪なんですけど…手洗いの話～2",
+      "slug": "hand_washing_2",
+      "date": "2024年07月15日"
+    },
+    {
+      "title": "ガスと電気と水道と",
+      "slug": "life_infra",
+      "date": "2024年07月18日"
+    },
+    {
+      "title": "F式全館空調は断念",
+      "slug": "f_type_aircon",
+      "date": "2024年07月23日"
+    },
+    {
+      "title": "閑話休題　新築立て看板",
+      "slug": "kanban",
+      "date": "2024年07月29日"
+    },
+    {
+      "title": "思ったより深い",
+      "slug": "entrance_to_basement",
+      "date": "2024年08月08日"
+    },
+    {
+      "title": "地下ボックスでけた",
+      "slug": "underground_box",
+      "date": "2024年08月14日"
+    },
+    {
+      "title": "助成金の話（申請中）",
+      "slug": "grants",
+      "date": "2024年08月21日"
+    },
+    {
+      "title": "グリーストラップの話",
+      "slug": "greasetrap",
+      "date": "2024年09月17日"
+    }
+  ]
+}
