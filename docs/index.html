@@ -3,547 +3,1051 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>半地下店舗兼用準防火第一種低層狭小住宅 | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <title>半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <meta name="description" content="東京都内サラリーマン「てんすけち」による家づくり記録。 半地下・店舗兼用・狭小住宅という変わった家づくりの全記録。">
   <style>
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
 :root {
-  --bg: #fafaf8;
-  --text: #2d2d2d;
-  --muted: #666;
-  --accent: #5c6bc0;
-  --accent-light: #e8eaf6;
-  --border: #e0e0e0;
-  --card-bg: #fff;
-  --max-w: 860px;
+  --accent:      #d9381e;
+  --accent-dark: #b02e18;
+  --accent-light:#fdf0ee;
+  --bg:          #f0ede8;
+  --card-bg:     #ffffff;
+  --text:        #333333;
+  --muted:       #888888;
+  --border:      #e0dbd4;
+  --header-bg:   #ffffff;
+  --footer-bg:   #2b2b2b;
+  --sidebar-w:   300px;
+  --main-max:    1100px;
+  --radius:      6px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: 'Noto Sans JP', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-size: 15px;
   line-height: 1.8;
-  font-size: 16px;
 }
 
 a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { color: var(--accent-dark); text-decoration: underline; }
+img { max-width: 100%; height: auto; }
 
-/* ヘッダー */
-header {
-  background: var(--accent);
-  color: #fff;
-  padding: 1.2rem 1.5rem;
+/* ===== ヘッダー ===== */
+.site-header {
+  background: var(--header-bg);
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-header a { color: #fff; }
-.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
-.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
-.site-nav a { margin-right: 1rem; color: #fff; }
-
-/* メインレイアウト */
-.container {
-  max-width: var(--max-w);
+.header-inner {
+  max-width: var(--main-max);
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+}
+.site-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.site-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+  white-space: nowrap;
+}
+.site-name a { color: inherit; }
+.site-name a:hover { text-decoration: none; color: var(--accent); }
+.site-tagline {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.header-nav {
+  display: flex;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+.header-nav a {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+  color: var(--text);
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.header-nav a:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+  text-decoration: none;
 }
 
-/* 記事カード（一覧） */
-.post-list { list-style: none; }
+/* ===== パンくず ===== */
+.breadcrumb-bar {
+  background: #f7f4f0;
+  border-bottom: 1px solid var(--border);
+}
+.breadcrumb {
+  max-width: var(--main-max);
+  margin: 0 auto;
+  padding: 0.5rem 20px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.breadcrumb a { color: var(--accent); }
+.breadcrumb-sep { color: #ccc; }
+
+/* ===== メインレイアウト ===== */
+.page-wrap {
+  max-width: var(--main-max);
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+  display: grid;
+  grid-template-columns: 1fr var(--sidebar-w);
+  gap: 28px;
+  align-items: start;
+}
+.page-wrap.full-width {
+  grid-template-columns: 1fr;
+}
+
+/* ===== カテゴリー見出し ===== */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+}
+.section-title h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.section-title h2 a { color: inherit; }
+.section-title h2 a:hover { color: var(--accent); text-decoration: none; }
+.section-count {
+  font-size: 0.72rem;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+}
+.section-more {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+.section-more:hover { text-decoration: underline; }
+.category-section { margin-bottom: 36px; }
+
+/* ===== 記事カードグリッド ===== */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  list-style: none;
+}
 .post-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.post-card:hover {
+  box-shadow: 0 6px 22px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.post-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #e8e2da;
+}
+.post-thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #e8e0d4 0%, #d4cbbf 100%);
+  color: #aaa;
+  font-size: 2rem;
+}
+.post-card-body {
+  padding: 12px 14px 14px;
+}
+.post-cat-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.cat-badge {
+  font-size: 0.68rem;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid #f0c0b0;
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+  line-height: 1.6;
+}
+.cat-badge:hover { background: var(--accent); color: #fff; text-decoration: none; border-color: var(--accent); }
+.post-card-body h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.post-card-body h3 a { color: var(--text); }
+.post-card-body h3 a:hover { color: var(--accent); text-decoration: none; }
+.post-date {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* カテゴリーページ・横並びリスト */
+.post-list-rows { list-style: none; }
+.post-row {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
   transition: box-shadow 0.2s;
 }
-.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
-.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
-.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
-.post-excerpt { font-size: 0.93rem; color: #444; }
-.cat-badge {
-  display: inline-block;
-  background: var(--accent-light);
-  color: var(--accent);
-  font-size: 0.75rem;
-  padding: 0.15rem 0.55rem;
-  border-radius: 4px;
-  margin-right: 0.3rem;
+.post-row:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+.post-row-thumb {
+  width: 160px;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+  background: #e8e2da;
 }
-
-/* カテゴリーセクション見出し */
-.category-section { margin-bottom: 2.5rem; }
-.category-heading {
-  font-size: 1.05rem;
-  font-weight: bold;
-  color: var(--accent);
-  border-left: 4px solid var(--accent);
-  padding-left: 0.75rem;
-  margin-bottom: 1rem;
+.post-row-thumb-placeholder {
+  width: 160px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #e8e0d4 0%, #d4cbbf 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 1.5rem;
 }
-.category-heading a { color: inherit; }
+.post-row-body {
+  padding: 12px 16px;
+  flex: 1;
+  min-width: 0;
+}
+.post-row-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+.post-row-body h3 a { color: var(--text); }
+.post-row-body h3 a:hover { color: var(--accent); text-decoration: none; }
+.post-row-excerpt { font-size: 0.82rem; color: #666; line-height: 1.65; margin-top: 5px; }
 
-/* 記事本文 */
+/* ===== 記事ページ ===== */
 article.post {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 2rem 2.2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
-article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
-article.post .post-meta { margin-bottom: 1.5rem; }
-.post-body { margin-top: 1.5rem; }
-.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
-.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
-.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
-.post-body p { margin-bottom: 1.1rem; }
-.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-hero-img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+.post-header {
+  padding: 22px 26px 18px;
+  border-bottom: 1px solid var(--border);
+}
+article.post h1 {
+  font-size: 1.45rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.post-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.post-body {
+  padding: 22px 26px 28px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+.post-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 2rem 0 0.7rem;
+  padding: 0.5rem 0.9rem;
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  color: var(--text);
+  border-radius: 0 4px 4px 0;
+}
+.post-body h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 1.6rem 0 0.55rem;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--border);
+}
+.post-body h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 1.3rem 0 0.45rem;
+  color: var(--accent-dark);
+}
+.post-body p { margin-bottom: 1rem; }
+.post-body ul, .post-body ol { margin: 0.7rem 0 1rem 1.6rem; }
 .post-body li { margin-bottom: 0.4rem; }
-.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 .post-body blockquote {
   border-left: 4px solid var(--accent);
   background: var(--accent-light);
   padding: 0.8rem 1.2rem;
-  margin: 1rem 0;
+  margin: 1.1rem 0;
   border-radius: 0 6px 6px 0;
+  color: #555;
 }
-.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
-.post-body th { background: var(--accent-light); }
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; }
+.post-body th { background: var(--accent-light); font-weight: 700; }
+.post-body tr:nth-child(even) td { background: #faf8f5; }
 
-/* ナビゲーション */
-.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-.post-nav a {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-.back-to-list { margin-top: 1.5rem; }
-
-/* カテゴリーページ */
-.page-heading {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--accent);
-}
-
-/* フッター */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--muted);
-  font-size: 0.82rem;
+/* 前後ナビ */
+.post-footer {
+  padding: 18px 26px;
   border-top: 1px solid var(--border);
-  margin-top: 3rem;
+  background: #faf8f5;
+}
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.post-nav a {
+  display: block;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  color: var(--text);
+  background: var(--card-bg);
+  line-height: 1.5;
+  transition: border-color 0.15s, color 0.15s;
+}
+.post-nav a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.nav-label { font-size: 0.68rem; color: var(--muted); display: block; margin-bottom: 2px; }
+.nav-next { text-align: right; }
+.back-link { font-size: 0.82rem; }
+
+/* ===== サイドバー ===== */
+.sidebar { display: flex; flex-direction: column; gap: 20px; }
+.widget {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.widget-title {
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  letter-spacing: 0.03em;
+}
+.widget-body { padding: 12px 14px; }
+
+/* カテゴリーウィジェット */
+.widget-cats { list-style: none; }
+.widget-cats li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.widget-cats li:last-child { border-bottom: none; }
+.widget-cats a { color: var(--text); }
+.widget-cats a:hover { color: var(--accent); text-decoration: none; }
+.widget-cat-count {
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: var(--bg);
+  padding: 0.1rem 0.45rem;
+  border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-  article.post { padding: 1.2rem 1rem; }
-  .container { padding: 1.2rem 1rem; }
+/* 最近の投稿ウィジェット */
+.widget-posts { list-style: none; }
+.widget-post {
+  display: flex;
+  gap: 9px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.widget-post:last-child { border-bottom: none; }
+.widget-post-thumb {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: #e8e2da;
+}
+.widget-post-thumb-placeholder {
+  width: 60px;
+  height: 45px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #e8e0d4 0%, #d4cbbf 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.widget-post-info { flex: 1; min-width: 0; }
+.widget-post-info a {
+  font-size: 0.8rem;
+  color: var(--text);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.widget-post-info a:hover { color: var(--accent); text-decoration: none; }
+.widget-post-date { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
+
+/* プロフィールウィジェット */
+.widget-profile {
+  text-align: center;
+  padding: 16px 14px;
+}
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 2rem;
+  border: 3px solid var(--accent);
+}
+.profile-name { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.profile-desc { font-size: 0.78rem; color: #666; line-height: 1.7; text-align: left; }
+
+/* ===== カテゴリーページ hero ===== */
+.cat-page-hero {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  border-left: 5px solid var(--accent);
+}
+.cat-page-hero h1 { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+.cat-page-hero .cat-count { font-size: 0.8rem; color: var(--muted); margin-top: 3px; }
+
+/* ===== フッター ===== */
+footer {
+  background: var(--footer-bg);
+  color: rgba(255,255,255,0.6);
+  padding: 36px 20px 24px;
+  font-size: 0.82rem;
+  margin-top: 0;
+}
+.footer-inner {
+  max-width: var(--main-max);
+  margin: 0 auto;
+}
+.footer-nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-nav a { color: rgba(255,255,255,0.7); }
+.footer-nav a:hover { color: #fff; text-decoration: none; }
+.footer-cats-section { margin-bottom: 18px; }
+.footer-cats-title { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-bottom: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
+.footer-cats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.footer-cat-link {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+.footer-cat-link:hover { color: #fff; border-color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-copy { color: rgba(255,255,255,0.35); font-size: 0.75rem; }
+
+/* ===== note バナー ===== */
+.note-banner-wrap {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 24px 20px;
+}
+.note-banner {
+  max-width: var(--main-max);
+  margin: 0 auto;
+}
+.note-banner-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #41c9b4 0%, #00b294 100%);
+  color: #fff !important;
+  border-radius: 10px;
+  padding: 18px 24px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(0,178,148,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.note-banner-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,178,148,0.4);
+  text-decoration: none !important;
+  color: #fff !important;
+}
+.note-banner-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.note-banner-text { flex: 1; }
+.note-banner-label {
+  font-size: 0.72rem;
+  opacity: 0.85;
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+  display: block;
+}
+.note-banner-title {
+  font-size: 1.0rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.note-banner-arrow {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .page-wrap {
+    grid-template-columns: 1fr;
+    padding: 16px 12px 36px;
+  }
+  .post-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .header-inner { flex-direction: column; align-items: flex-start; padding: 10px 16px; min-height: unset; }
+  .header-nav { flex-wrap: wrap; }
+  .post-row-thumb, .post-row-thumb-placeholder { width: 100px; }
+  .post-header, .post-body, .post-footer { padding: 16px; }
+  article.post h1 { font-size: 1.2rem; }
+}
+@media (max-width: 480px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .post-nav { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
-<header>
-  <div class="site-title"><a href="index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
-  <nav class="site-nav"><a href="index.html">トップ</a></nav>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">
+      <div class="site-name"><a href="index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+      <div class="site-tagline">by てんすけち</div>
+    </div>
+    <nav class="header-nav"><a href="categories/introduction.html">1. はじめに</a><a href="categories/mycondition.html">2.条件整理</a><a href="categories/journeytofindproperty.html">3.物件探しの旅</a><a href="categories/partnerselection.html">4.建築パートナー選定</a><a href="categories/undergrounddungeon.html">5.迷宮～地下室</a><a href="categories/openingofrestaurant.html">6.できるか店舗</a><a href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></nav>
+  </div>
 </header>
-<div class="container">
+
+<div class="page-wrap">
+  <main><section class="category-section">
+<div class="section-title">
+  <h2><a href="categories/introduction.html">1. はじめに</a></h2>
+  <span class="section-count">1</span>
+  <a class="section-more" href="categories/introduction.html">すべて見る →</a>
+</div>
+<ul class="post-grid"><li class="post-card">
+  <a href="posts/introduction.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-12-15.53.49-An-eye-catching-illustration-for-a-blog-post-about-a-unique-home-building-journey-by-a-salaryman-in-Tokyo.-The-image-should-depict-a-small-narrow-hou.webp" alt="はじめに" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/introduction.html">1. はじめに</a></div>
+    <h3><a href="posts/introduction.html">はじめに</a></h3>
+    <div class="post-date">2024/06/12</div>
+  </div>
+</li></ul>
+</section>
 <section class="category-section">
-<h2 class="category-heading">
+<div class="section-title">
+  <h2><a href="categories/mycondition.html">2.条件整理</a></h2>
+  <span class="section-count">1</span>
+  <a class="section-more" href="categories/mycondition.html">すべて見る →</a>
+</div>
+<ul class="post-grid"><li class="post-card">
+  <a href="posts/mycondition.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-12-15.46.41-A-detailed-illustration-of-a-narrow-house-in-Tokyo-with-the-following-features_-small-land-area-of-less-than-25-tsubo-a-semi-basement-and-a-combined.webp" alt="家づくりの条件" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/mycondition.html">2.条件整理</a></div>
+    <h3><a href="posts/mycondition.html">家づくりの条件</a></h3>
+    <div class="post-date">2024/06/12</div>
+  </div>
+</li></ul>
+</section>
+<section class="category-section">
+<div class="section-title">
+  <h2><a href="categories/journeytofindproperty.html">3.物件探しの旅</a></h2>
+  <span class="section-count">5</span>
+  <a class="section-more" href="categories/journeytofindproperty.html">すべて見る →</a>
+</div>
+<ul class="post-grid"><li class="post-card">
+  <a href="posts/houseswithrestaurant.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-12-16.09.14-An-illustration-of-a-combined-residential-and-restaurant-building-in-Tokyo.-The-image-should-depict-a-small-narrow-house-with-a-cozy-restaurant-on-th.webp" alt="店舗兼用/併用住宅を求めて" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/journeytofindproperty.html">3.物件探しの旅</a></div>
+    <h3><a href="posts/houseswithrestaurant.html">店舗兼用/併用住宅を求めて</a></h3>
+    <div class="post-date">2024/06/12</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/demon_modification.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-14-18.31.58-An-illustration-for-a-blog-post-about-a-house-under-renovation.-The-image-should-depict-a-small-narrow-house-with-clear-signs-of-construction-work-s.webp" alt="中古物件/自宅改造で飲食店開業？" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/journeytofindproperty.html">3.物件探しの旅</a></div>
+    <h3><a href="posts/demon_modification.html">中古物件/自宅改造で飲食店開業？</a></h3>
+    <div class="post-date">2024/06/14</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/containerhouse.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-14-18.46.04-An-illustration-for-a-blog-post-about-combining-a-residential-house-with-a-container-house-for-a-restaurant.-The-image-should-depict-a-small-cozy-res.webp" alt="コンテナハウス" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/journeytofindproperty.html">3.物件探しの旅</a></div>
+    <h3><a href="posts/containerhouse.html">コンテナハウス</a></h3>
+    <div class="post-date">2024/06/14</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/restaurantlocation.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-14-19.32.47-An-illustration-depicting-a-bustling-shopping-street-transitioning-into-a-quiet-deserted-alley.-The-busy-shopping-street-should-have-vibrant-storefro.webp" alt="土地探し～店舗の立地条件" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/journeytofindproperty.html">3.物件探しの旅</a></div>
+    <h3><a href="posts/restaurantlocation.html">土地探し～店舗の立地条件</a></h3>
+    <div class="post-date">2024/06/14</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/mychoice.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-14-20.19.07-An-illustration-of-a-small-vacant-plot-of-land-about-10-tsubo-facing-a-road-to-the-south.-The-plot-should-be-empty-with-no-buildings.-To-the-left-of.webp" alt="我が家の土地" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/journeytofindproperty.html">3.物件探しの旅</a></div>
+    <h3><a href="posts/mychoice.html">我が家の土地</a></h3>
+    <div class="post-date">2024/06/14</div>
+  </div>
+</li></ul>
+</section>
+<section class="category-section">
+<div class="section-title">
+  <h2><a href="categories/partnerselection.html">4.建築パートナー選定</a></h2>
+  <span class="section-count">7</span>
+  <a class="section-more" href="categories/partnerselection.html">すべて見る →</a>
+</div>
+<ul class="post-grid"><li class="post-card">
+  <a href="posts/post_84.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-14-20.27.15-An-illustration-depicting-a-choice-between-three-options.-The-image-should-show-three-distinct-paths-or-doors-each-representing-a-different-choice.-T.webp" alt="おうちづくりパートナー選び" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/partnerselection.html">4.建築パートナー選定</a></div>
+    <h3><a href="posts/post_84.html">おうちづくりパートナー選び</a></h3>
+    <div class="post-date">2024/06/14</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/architect.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-19-11.05.21-An-illustration-depicting-an-architect-in-a-professional-setting-holding-blueprints-and-a-pencil-with-a-background-showing-architectural-drawings-an.webp" alt="# 建築士さん（チクシ・ケンさん）  -" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/partnerselection.html">4.建築パートナー選定</a></div>
+    <h3><a href="posts/architect.html"># 建築士さん（チクシ・ケンさん）  -</a></h3>
+    <div class="post-date">2024/06/19</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/housebuilder.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-20-21.13.01-An-illustration-depicting-an-experienced-and-skilled-craftsman-known-as-a-master-craftsman.-The-image-shows-an-older-man-with-silver-hair-wearing-wo.webp" alt="ハウスビルダーさん（ギンジさん）" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/partnerselection.html">4.建築パートナー選定</a></div>
+    <h3><a href="posts/housebuilder.html">ハウスビルダーさん（ギンジさん）</a></h3>
+    <div class="post-date">2024/06/20</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/housemaker1.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-21-09.13.46-An-illustration-depicting-internet-search.-The-image-shows-a-computer-screen-with-a-search-engine-interface-a-search-bar-with-a-cursor-and-various-s.webp" alt="ハウスメーカーさん　～その1" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/partnerselection.html">4.建築パートナー選定</a></div>
+    <h3><a href="posts/housemaker1.html">ハウスメーカーさん　～その1</a></h3>
+    <div class="post-date">2024/06/21</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/housemaker_2.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-24-14.00.02-An-illustration-depicting-a-team-of-professionals-including-architects-designers-and-salespeople-working-together.-The-scene-shows-a-collaborative-w.webp" alt="ハウスメーカーさん　～その2（Fチームさん）" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/partnerselection.html">4.建築パートナー選定</a></div>
+    <h3><a href="posts/housemaker_2.html">ハウスメーカーさん　～その2（Fチームさん）</a></h3>
+    <div class="post-date">2024/06/24</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/photojudgment.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-25-07.46.28-An-illustration-depicting-a-podium-with-gold-silver-and-bronze-positions.-The-podium-should-have-a-first-second-and-third-place-with-gold-silver.webp" alt="写真判定" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/partnerselection.html">4.建築パートナー選定</a></div>
+    <h3><a href="posts/photojudgment.html">写真判定</a></h3>
+    <div class="post-date">2024/06/25</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/backstory_contract.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-28-11.41.33-An-illustration-of-a-dispute-over-a-contract.-The-scene-depicts-two-individuals-standing-on-either-side-of-a-table-arguing-intensely-over-a-document-.webp" alt="裏話　～契約モメモメ" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/partnerselection.html">4.建築パートナー選定</a></div>
+    <h3><a href="posts/backstory_contract.html">裏話　～契約モメモメ</a></h3>
+    <div class="post-date">2024/06/28</div>
+  </div>
+</li></ul>
+</section>
+<section class="category-section">
+<div class="section-title">
+  <h2><a href="categories/undergrounddungeon.html">5.迷宮～地下室</a></h2>
+  <span class="section-count">8</span>
+  <a class="section-more" href="categories/undergrounddungeon.html">すべて見る →</a>
+</div>
+<ul class="post-grid"><li class="post-card">
+  <a href="posts/type_of_undergroundroom.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-26-12.46.13-A-scene-of-workers-excavating-an-underground-space.-They-are-using-shovels-and-excavators-to-dig.-The-ground-is-filled-with-dug-up-soil-and-rocks.-The.webp" alt="いろいろな地下室のあれこれ" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+    <h3><a href="posts/type_of_undergroundroom.html">いろいろな地下室のあれこれ</a></h3>
+    <div class="post-date">2024/06/26</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/shelter.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-27-08.34.58-An-illustration-depicting-an-underground-shelter.-The-scene-shows-a-robust-secure-underground-space-designed-for-safety-and-comfort.-It-includes-rein.webp" alt="もう一つの地下室～地下シェルターという選択肢" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+    <h3><a href="posts/shelter.html">もう一つの地下室～地下シェルターという選択肢</a></h3>
+    <div class="post-date">2024/06/27</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/general_estimation.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-29-08.26.18-A-hand-drawn-style-illustration-of-a-person-holding-a-detailed-estimate-sheet.-The-scene-is-warm-and-approachable-with-the-person-looking-thoughtful-.webp" alt="地下室お見積もり（教科書編）" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+    <h3><a href="posts/general_estimation.html">地下室お見積もり（教科書編）</a></h3>
+    <div class="post-date">2024/06/29</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/real_estimation.html"><img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-30-20.17.31-A-hand-drawn-style-illustration-of-a-person-looking-shocked-while-holding-a-high-estimate-sheet.-The-scene-is-warm-and-approachable-with-the-person-w.webp" alt="地下室お見積もり（実際編）" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+    <h3><a href="posts/real_estimation.html">地下室お見積もり（実際編）</a></h3>
+    <div class="post-date">2024/06/30</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/non_conformity.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-11-08.31.32-A-hand-drawn-style-illustration-depicting-a-construction-site-where-a-large-amount-of-rubble-has-been-discovered-causing-the-work-to-become-difficult.webp" alt="裏話　～契約不適合責任" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+    <h3><a href="posts/non_conformity.html">裏話　～契約不適合責任</a></h3>
+    <div class="post-date">2024/07/11</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/old_well.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-12-10.26.38-A-hand-drawn-style-illustration-depicting-a-construction-site-where-an-old-well-has-been-discovered.-The-scene-includes-construction-workers-uncoverin.webp" alt="裏話　～古井戸が出てきた" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+    <h3><a href="posts/old_well.html">裏話　～古井戸が出てきた</a></h3>
+    <div class="post-date">2024/07/12</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/entrance_to_basement.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-08-16.33.49-A-hand-drawn-style-illustration-of-the-entrance-to-a-basement.-The-scene-shows-a-narrow-stairway-leading-down-into-a-dark-partially-constructed-under.webp" alt="思ったより深い" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+    <h3><a href="posts/entrance_to_basement.html">思ったより深い</a></h3>
+    <div class="post-date">2024/08/08</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/underground_box.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-14-17.07.18-A-hand-drawn-style-illustration-of-a-box-shaped-shelter-being-constructed-underground.-The-scene-features-a-robust-concrete-structure-with-clear-def.webp" alt="地下ボックスでけた" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/undergrounddungeon.html">5.迷宮～地下室</a></div>
+    <h3><a href="posts/underground_box.html">地下ボックスでけた</a></h3>
+    <div class="post-date">2024/08/14</div>
+  </div>
+</li></ul>
+</section>
+<section class="category-section">
+<div class="section-title">
+  <h2><a href="categories/openingofrestaurant.html">6.できるか店舗</a></h2>
+  <span class="section-count">8</span>
+  <a class="section-more" href="categories/openingofrestaurant.html">すべて見る →</a>
+</div>
+<ul class="post-grid"><li class="post-card">
+  <a href="posts/conditions.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-01-11.55.14-A-hand-drawn-style-illustration-of-a-restaurant-design-scene.-The-scene-includes-an-architect-and-a-designer-working-together-on-blueprints-and-models.webp" alt="飲食店の設計条件" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/openingofrestaurant.html">6.できるか店舗</a></div>
+    <h3><a href="posts/conditions.html">飲食店の設計条件</a></h3>
+    <div class="post-date">2024/07/01</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/itteisou.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-02-09.16.12-A-hand-drawn-style-illustration-of-a-very-narrow-restaurant-in-a-small-cozy-space.-The-scene-includes-compact-seating-a-small-kitchen-area-and-a-wa.webp" alt="第一種低層住居専用地域で飲食店" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/openingofrestaurant.html">6.できるか店舗</a></div>
+    <h3><a href="posts/itteisou.html">第一種低層住居専用地域で飲食店</a></h3>
+    <div class="post-date">2024/07/02</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/barrier_free.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-08-11.32.14-A-hand-drawn-style-illustration-of-a-house-with-a-slope.-The-house-features-a-thoughtful-design-that-includes-a-wide-ramp-for-accessibility-blending-.webp" alt="5坪なんですけど…バリアフリー" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/openingofrestaurant.html">6.できるか店舗</a></div>
+    <h3><a href="posts/barrier_free.html">5坪なんですけど…バリアフリー</a></h3>
+    <div class="post-date">2024/07/08</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/emergencylights.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-10-18.43.08-A-hand-drawn-style-illustration-showing-a-scene-with-emergency-lighting-and-exit-signs-being-used.-The-scene-includes-a-small-commercial-space-with-cl.webp" alt="5坪なんですけど…非常用照明" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/openingofrestaurant.html">6.できるか店舗</a></div>
+    <h3><a href="posts/emergencylights.html">5坪なんですけど…非常用照明</a></h3>
+    <div class="post-date">2024/07/10</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/hand_washing_1.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-14-12.54.47-A-hand-drawn-style-illustration-depicting-a-cluttered-employee-handwashing-station-in-a-small-restaurant.-The-scene-includes-a-sink-with-various-items.webp" alt="5坪なんですけど…手洗いの話～1" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/openingofrestaurant.html">6.できるか店舗</a></div>
+    <h3><a href="posts/hand_washing_1.html">5坪なんですけど…手洗いの話～1</a></h3>
+    <div class="post-date">2024/07/14</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/hand_washing_2.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-15-08.40.33-A-hand-drawn-style-illustration-of-a-quirky-house-with-numerous-water-faucets-protruding-from-various-places.-The-house-should-look-unusual-with-fauce.webp" alt="5坪なんですけど…手洗いの話～2" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/openingofrestaurant.html">6.できるか店舗</a></div>
+    <h3><a href="posts/hand_washing_2.html">5坪なんですけど…手洗いの話～2</a></h3>
+    <div class="post-date">2024/07/15</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/life_infra.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-18-09.12.10-A-hand-drawn-style-illustration-depicting-a-person-surrounded-by-representatives-from-gas-water-and-electricity-companies-who-are-bullying-or-press.webp" alt="ガスと電気と水道と" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/openingofrestaurant.html">6.できるか店舗</a></div>
+    <h3><a href="posts/life_infra.html">ガスと電気と水道と</a></h3>
+    <div class="post-date">2024/07/18</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/greasetrap.html"><img src="https://tensukechi.com/wp-content/uploads/2024/09/DALL·E-2024-09-17-17.52.29-A-hand-drawn-style-illustration-showing-a-grease-trap-and-the-challenges-of-cleaning-it.-The-scene-includes-a-grease-trap-with-grimy-oily-residue-an.webp" alt="グリーストラップの話" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/openingofrestaurant.html">6.できるか店舗</a></div>
+    <h3><a href="posts/greasetrap.html">グリーストラップの話</a></h3>
+    <div class="post-date">2024/09/17</div>
+  </div>
+</li></ul>
+</section>
+<section class="category-section">
+<div class="section-title">
+  <h2><a href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></h2>
+  <span class="section-count">6</span>
+  <a class="section-more" href="categories/narrow_house.html">すべて見る →</a>
+</div>
+<ul class="post-grid"><li class="post-card">
+  <a href="posts/stickingpoint.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-03-10.06.12-A-hand-drawn-style-illustration-of-a-two-story-house-incorporating-various-thoughtful-features.-The-house-has-a-modern-cozy-appearance-with-the-follo.webp" alt="狭小住宅に詰め込んだもの" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+    <h3><a href="posts/stickingpoint.html">狭小住宅に詰め込んだもの</a></h3>
+    <div class="post-date">2024/07/03</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/think_totally.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-04-06.11.43-A-hand-drawn-style-illustration-symbolizing-Think-Totally-with-a-focus-on-long-term-planning-and-careful-consideration.-The-image-should-show-a-pers.webp" alt="「トータル」に考えたい" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+    <h3><a href="posts/think_totally.html">「トータル」に考えたい</a></h3>
+    <div class="post-date">2024/07/04</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/no_margin.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-05-10.13.04-A-hand-drawn-style-illustration-of-a-homes-staircase-area-being-used-efficiently.-The-space-under-the-stairs-is-creatively-utilized-with-a-small-toil.webp" alt="1マスも無駄にしないお話" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+    <h3><a href="posts/no_margin.html">1マスも無駄にしないお話</a></h3>
+    <div class="post-date">2024/07/05</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/f_type_aircon.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-23-08.41.00-A-hand-drawn-style-illustration-of-a-small-house-with-an-oversized-air-conditioner-installed.-The-scene-should-be-slightly-humorous-with-the-large-ai.webp" alt="F式全館空調は断念" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+    <h3><a href="posts/f_type_aircon.html">F式全館空調は断念</a></h3>
+    <div class="post-date">2024/07/23</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/kanban.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-29-11.32.54-A-hand-drawn-style-illustration-of-a-construction-site-with-a-clearly-visible-Building-Permit-Display-Board-建築確認済表示板-prominently-placed.-The-scene.webp" alt="閑話休題　新築立て看板" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+    <h3><a href="posts/kanban.html">閑話休題　新築立て看板</a></h3>
+    <div class="post-date">2024/07/29</div>
+  </div>
+</li><li class="post-card">
+  <a href="posts/grants.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-21-12.57.41-A-hand-drawn-style-illustration-of-a-house-made-entirely-of-money.-The-house-should-have-walls-roof-and-windows-all-constructed-from-stacks-of-bills.webp" alt="助成金の話（申請中）" class="post-thumb" loading="lazy"></a>
+  <div class="post-card-body">
+    <div class="post-cat-badges"><a class="cat-badge" href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+    <h3><a href="posts/grants.html">助成金の話（申請中）</a></h3>
+    <div class="post-date">2024/08/21</div>
+  </div>
+</li></ul>
+</section></main>
+  <aside class="sidebar">
+  <div class="widget">
+    <div class="widget-title">プロフィール</div>
+    <div class="widget-body widget-profile">
+      <div class="profile-avatar">🏠</div>
+      <div class="profile-name">てんすけち</div>
+      <div class="profile-desc">東京都内に住むサラリーマン。<br>変わった家づくりの全記録を公開中。</div>
+    </div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">最近の投稿</div>
+    <div class="widget-body" style="padding:6px 14px">
+      <ul class="widget-posts"><li class="widget-post">
+  <a href="posts/greasetrap.html"><img src="https://tensukechi.com/wp-content/uploads/2024/09/DALL·E-2024-09-17-17.52.29-A-hand-drawn-style-illustration-showing-a-grease-trap-and-the-challenges-of-cleaning-it.-The-scene-includes-a-grease-trap-with-grimy-oily-residue-an.webp" alt="グリーストラップの話" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/greasetrap.html">グリーストラップの話</a>
+    <div class="widget-post-date">2024/09/17</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/grants.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-21-12.57.41-A-hand-drawn-style-illustration-of-a-house-made-entirely-of-money.-The-house-should-have-walls-roof-and-windows-all-constructed-from-stacks-of-bills.webp" alt="助成金の話（申請中）" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/grants.html">助成金の話（申請中）</a>
+    <div class="widget-post-date">2024/08/21</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/underground_box.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-14-17.07.18-A-hand-drawn-style-illustration-of-a-box-shaped-shelter-being-constructed-underground.-The-scene-features-a-robust-concrete-structure-with-clear-def.webp" alt="地下ボックスでけた" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/underground_box.html">地下ボックスでけた</a>
+    <div class="widget-post-date">2024/08/14</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/entrance_to_basement.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-08-16.33.49-A-hand-drawn-style-illustration-of-the-entrance-to-a-basement.-The-scene-shows-a-narrow-stairway-leading-down-into-a-dark-partially-constructed-under.webp" alt="思ったより深い" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/entrance_to_basement.html">思ったより深い</a>
+    <div class="widget-post-date">2024/08/08</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/kanban.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-29-11.32.54-A-hand-drawn-style-illustration-of-a-construction-site-with-a-clearly-visible-Building-Permit-Display-Board-建築確認済表示板-prominently-placed.-The-scene.webp" alt="閑話休題　新築立て看板" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/kanban.html">閑話休題　新築立て看板</a>
+    <div class="widget-post-date">2024/07/29</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/f_type_aircon.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-23-08.41.00-A-hand-drawn-style-illustration-of-a-small-house-with-an-oversized-air-conditioner-installed.-The-scene-should-be-slightly-humorous-with-the-large-ai.webp" alt="F式全館空調は断念" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/f_type_aircon.html">F式全館空調は断念</a>
+    <div class="widget-post-date">2024/07/23</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/life_infra.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-18-09.12.10-A-hand-drawn-style-illustration-depicting-a-person-surrounded-by-representatives-from-gas-water-and-electricity-companies-who-are-bullying-or-press.webp" alt="ガスと電気と水道と" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/life_infra.html">ガスと電気と水道と</a>
+    <div class="widget-post-date">2024/07/18</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/hand_washing_2.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-15-08.40.33-A-hand-drawn-style-illustration-of-a-quirky-house-with-numerous-water-faucets-protruding-from-various-places.-The-house-should-look-unusual-with-fauce.webp" alt="5坪なんですけど…手洗いの話～2" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/hand_washing_2.html">5坪なんですけど…手洗いの話～2</a>
+    <div class="widget-post-date">2024/07/15</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/hand_washing_1.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-14-12.54.47-A-hand-drawn-style-illustration-depicting-a-cluttered-employee-handwashing-station-in-a-small-restaurant.-The-scene-includes-a-sink-with-various-items.webp" alt="5坪なんですけど…手洗いの話～1" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/hand_washing_1.html">5坪なんですけど…手洗いの話～1</a>
+    <div class="widget-post-date">2024/07/14</div>
+  </div>
+</li><li class="widget-post">
+  <a href="posts/old_well.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-12-10.26.38-A-hand-drawn-style-illustration-depicting-a-construction-site-where-an-old-well-has-been-discovered.-The-scene-includes-construction-workers-uncoverin.webp" alt="裏話　～古井戸が出てきた" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="posts/old_well.html">裏話　～古井戸が出てきた</a>
+    <div class="widget-post-date">2024/07/12</div>
+  </div>
+</li></ul>
+    </div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">カテゴリー</div>
+    <div class="widget-body" style="padding:6px 14px">
+      <ul class="widget-cats"><li>
   <a href="categories/introduction.html">1. はじめに</a>
-</h2>
-<ul class="post-list">
-<li class="post-card">
-  <h2><a href="posts/introduction.html">はじめに</a></h2>
-  <div class="post-meta">2024年06月12日 &nbsp; <span class="cat-badge">1. はじめに</span></div>
-  <div class="post-excerpt">はじめのはじめに
-東京都内に住むサラリーマンです。「てんすけち」と名乗ることにします。
-
-ちょっと変わった家づくりをしています。その詳細はおいおい記載していきます。
-が、現在進行形でいろいろ困ってます。同じような境遇にぶち当たった方のために…</div>
-</li>
-</ul>
-</section>
-<section class="category-section">
-<h2 class="category-heading">
+  <span class="widget-cat-count">1</span>
+</li><li>
   <a href="categories/mycondition.html">2.条件整理</a>
-</h2>
-<ul class="post-list">
-<li class="post-card">
-  <h2><a href="posts/mycondition.html">家づくりの条件</a></h2>
-  <div class="post-meta">2024年06月12日 &nbsp; <span class="cat-badge">2.条件整理</span></div>
-  <div class="post-excerpt">変わった家づくり、の詳細は以下の通り。
-変わった家づくり、東京都内狭小住宅の詳細は以下の通り。
-
- 	
-
- 	東京都内狭小住宅（土地25坪弱）
- 	第一種低層住宅専用地域
- 	準防火地域
- 	半地下室
- 	店舗（飲食店）兼用住宅
-
-
-
-東京…</div>
-</li>
-</ul>
-</section>
-<section class="category-section">
-<h2 class="category-heading">
+  <span class="widget-cat-count">1</span>
+</li><li>
   <a href="categories/journeytofindproperty.html">3.物件探しの旅</a>
-</h2>
-<ul class="post-list">
-<li class="post-card">
-  <h2><a href="posts/houseswithrestaurant.html">店舗兼用/併用住宅を求めて</a></h2>
-  <div class="post-meta">2024年06月12日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
-  <div class="post-excerpt">アラフィフの野望
-これは完全に妻てんすけこの希望というか野望です。将来、飲食店経営に関わっていきたいという長年の野望。将来ってもうあんたもアラフィフよ。
-
-じゃーその第一歩を踏み出せる家にしよう。ということで始まった物件検索。
-
-そんな人ほ…</div>
-</li><li class="post-card">
-  <h2><a href="posts/demon_modification.html">中古物件/自宅改造で飲食店開業？</a></h2>
-  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
-  <div class="post-excerpt">改築で飲食店のハードルは高いのか？
-店舗兼用への道、てことで次に考えたのが③。
-
-子どもが出ていく前提なら自宅部分は2LDKで何とかなります。なので3LDKを買って1部屋を店舗改装すればいいじゃん、という発想ですね。
-
-うーん、もう少し若く…</div>
-</li><li class="post-card">
-  <h2><a href="posts/containerhouse.html">コンテナハウス</a></h2>
-  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
-  <div class="post-excerpt">コンテナハウスで自宅併設？
-もう一回考えるならコンテナハウス併設で考えてみたい。こんなの（住たくeco工房さん「木箱」）。ステキすぎる。
-これならちょっと広い駐車場がある家なら、併設で店舗開業できそう。
-
-[caption id=&quot;atta…</div>
-</li><li class="post-card">
-  <h2><a href="posts/restaurantlocation.html">土地探し～店舗の立地条件</a></h2>
-  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
-  <div class="post-excerpt">店舗ゆえの立地条件
-コンテナ設置できる駐車場のある物件、1階に掃き出し窓があっていい感じにお店導線が作れそうな物件、、、ま、難しいですね。
-都心の家の駐車場なんて、たいていは2階の軒下的なサイズ感。カーポートがあるような平地の駐車場なんて高…</div>
-</li><li class="post-card">
-  <h2><a href="posts/mychoice.html">我が家の土地</a></h2>
-  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">3.物件探しの旅</span></div>
-  <div class="post-excerpt">たどり着いた土地
-こうして行きついた土地は、住まいとして、店舗として、大満足。
-
- 	東京都23区西部
- 	地下鉄駅から徒歩2分、中央線・総武線のJRからは徒歩12分（商店街が続いているのであまり遠さは感じないし実際人通りも続いている）
- …</div>
-</li>
-</ul>
-</section>
-<section class="category-section">
-<h2 class="category-heading">
+  <span class="widget-cat-count">5</span>
+</li><li>
   <a href="categories/partnerselection.html">4.建築パートナー選定</a>
-</h2>
-<ul class="post-list">
-<li class="post-card">
-  <h2><a href="posts/post_84.html">おうちづくりパートナー選び</a></h2>
-  <div class="post-meta">2024年06月14日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
-  <div class="post-excerpt">土地→パートナー選定
-そもそも土地探しの前にHMを決めるべしという記事を見ましたが、そうなんですかね。
-
-土地の可能性を最大限引き出すことが建築の妙ならば、土地にあった建築パートナーがいるような気がします。
-
-少なくともうちの場合には、立地…</div>
-</li><li class="post-card">
-  <h2><a href="posts/architect.html"># 建築士さん（チクシ・ケンさん）  -</a></h2>
-  <div class="post-meta">2024年06月19日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
-  <div class="post-excerpt">建築士さん（の作品）に一目ぼれ
-コロナ期間中、YouTube等動画閲覧にはまり、サンドウィッチマンの面白さにはまりました。何十回も聞いていると面白さを超え、安心感になり、子守唄を聞くように眠れるようになりました。
-建築士というと、サンドウィ…</div>
-</li><li class="post-card">
-  <h2><a href="posts/housebuilder.html">ハウスビルダーさん（ギンジさん）</a></h2>
-  <div class="post-meta">2024年06月20日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
-  <div class="post-excerpt">地下室を建てられる地元密着のビルダーさん
-ハウスビルダーさんという表現が正しいのかな。
-施工エリアは2区に集中している地域に根差した会社さんで、設計～施工まで一気通貫でやっていらっしゃいます。一つだけですがモデルハウスもあって、いわゆる「工…</div>
-</li><li class="post-card">
-  <h2><a href="posts/housemaker1.html">ハウスメーカーさん　～その1</a></h2>
-  <div class="post-meta">2024年06月21日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
-  <div class="post-excerpt">タウンライフさんを使ってみた
-知名度は低くないと思うが、いわゆる大手ではない。中堅よりは大手より。そんなハウスメーカーさんとの出会いは、「タウンライフ」経由でした。
-
-当初はあまり期待もせず、大外からまくってこられて契約に至ったのです。
-建…</div>
-</li><li class="post-card">
-  <h2><a href="posts/housemaker_2.html">ハウスメーカーさん　～その2（Fチームさん）</a></h2>
-  <div class="post-meta">2024年06月24日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
-  <div class="post-excerpt">Fチームさんとの出会い
-1社だけ、地下室×店舗兼用住宅の難条件に向き合ってくれたのが最終的に決定したハウスメーカーさんです。
-ここではFチームさんとさせていただきましょう。Fの意味は追い追いお話しするかもしれませんが、重要なのはチームである…</div>
-</li><li class="post-card">
-  <h2><a href="posts/photojudgment.html">写真判定</a></h2>
-  <div class="post-meta">2024年06月25日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
-  <div class="post-excerpt">ケツロン
-チクシ・ケンさんに図面を書いてもらって、ギンジさんに地下室と基礎を作ってもらって、ハウスメーカーさんに仕上げと保証をしてもらえたら、と思います。
-
-間違いなく3社ともよかったし、完ぺきではなかったし、だけどそれぞれの利点にマッチす…</div>
-</li><li class="post-card">
-  <h2><a href="posts/backstory_contract.html">裏話　～契約モメモメ</a></h2>
-  <div class="post-meta">2024年06月28日 &nbsp; <span class="cat-badge">4.建築パートナー選定</span></div>
-  <div class="post-excerpt">契約まで
-
-Fチームさんとの契約は、でも実はもめました。
-
-まず値引きはしてもらいました。というか先方から提案がありました。
-
-ここまでの経緯を読んでいただけばお分かりの通り、Fチームさんは最後方に位置していました。そのことは正直にお伝えし…</div>
-</li>
-</ul>
-</section>
-<section class="category-section">
-<h2 class="category-heading">
+  <span class="widget-cat-count">7</span>
+</li><li>
   <a href="categories/undergrounddungeon.html">5.迷宮～地下室</a>
-</h2>
-<ul class="post-list">
-<li class="post-card">
-  <h2><a href="posts/type_of_undergroundroom.html">いろいろな地下室のあれこれ</a></h2>
-  <div class="post-meta">2024年06月26日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
-  <div class="post-excerpt">そもそも地下室とは。
-一口で地下室といっても色々ありますよ、というお話。
-
-以下、ChatGPTに作らせたっていただいた記事にコメントする形です。はい、ちょっち手抜きです。
-
-
-建築基準法上、地下室とは「建築物の床が地盤面以下に位置する階」…</div>
-</li><li class="post-card">
-  <h2><a href="posts/shelter.html">もう一つの地下室～地下シェルターという選択肢</a></h2>
-  <div class="post-meta">2024年06月27日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
-  <div class="post-excerpt">防災シェルター
-前項で地下室の種類を挙げておきながら、いきなりそのどれでもないお話をしたい。
-
-そう、シェルターである。
-
-不穏な隣国様の活動で、「地下シェルター」の必要性が頭をよぎったことがある人は少なくないのではないか。 東京都がアザブ…</div>
-</li><li class="post-card">
-  <h2><a href="posts/general_estimation.html">地下室お見積もり（教科書編）</a></h2>
-  <div class="post-meta">2024年06月29日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
-  <div class="post-excerpt">10坪の地下室を作るのに何にいくらかかるのか？
-ネットで調べると以下のような項目に分解されて示されていることが多い。
-
- 	地盤調査（5～30万円）
-
- 	地下を掘るならボーリング調査は必須と思った方がよさそう。
-
-
- 	地盤改良（50～3…</div>
-</li><li class="post-card">
-  <h2><a href="posts/real_estimation.html">地下室お見積もり（実際編）</a></h2>
-  <div class="post-meta">2024年06月30日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
-  <div class="post-excerpt">プチ公開。地下室費用
-前項教科書編からの続き。
-
-我が家の地下室はおおよそ5坪の半地下である。
-
-で、1000万円では収まらなかった。坪200万円以上である。（ホントのホントを言えば250近い。ただいろんなものが入っているし、どこまでいって…</div>
-</li><li class="post-card">
-  <h2><a href="posts/non_conformity.html">裏話　～契約不適合責任</a></h2>
-  <div class="post-meta">2024年07月11日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
-  <div class="post-excerpt">土地の売主さんとの契約不適合責任に関する交渉
-実は契約不適合責任について土地の売主さんと若干もめていた。
-
-契約書面上は引き渡しから3か月以内での通知期間になっていて、もちろんそれはわかっていて契約したのだが、当時はまだ着工メドもたっていな…</div>
-</li><li class="post-card">
-  <h2><a href="posts/old_well.html">裏話　～古井戸が出てきた</a></h2>
-  <div class="post-meta">2024年07月12日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
-  <div class="post-excerpt">井戸出現
-基礎工事が始まった初日。Fチームさんから衝撃の連絡が。。。
-
-「古井戸らしきものが出てきました」
-
-真っ白になりかかった頭で、
-
- 	最悪、そもそも地盤として大丈夫なのか。地下は成立するのか
- 	撤去費用（あるいは追加の地盤補強工…</div>
-</li><li class="post-card">
-  <h2><a href="posts/entrance_to_basement.html">思ったより深い</a></h2>
-  <div class="post-meta">2024年08月08日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
-  <div class="post-excerpt">地下室の施工進捗。記録用の投稿。
-
-半地下と侮るなかれ、思ったより深い。。井戸も出るわ。
-
-着工～3日後には最深部まで掘って井戸発見。
-
-そこから2週間後。
-これでもすでに地下の基盤部分は埋められた状態。
-
-
-＋1週間でこうなる。
-半地下の…</div>
-</li><li class="post-card">
-  <h2><a href="posts/underground_box.html">地下ボックスでけた</a></h2>
-  <div class="post-meta">2024年08月14日 &nbsp; <span class="cat-badge">5.迷宮～地下室</span></div>
-  <div class="post-excerpt">前回の続き
-
-さらに1週間ちょっと。地下というか箱ができた。
-我が家のシェルターだな。
-
-
-
-下部の方にある水色のが断熱材のスタイロフォームかな。
-この子だけでめっちゃ値上がった金食い虫ではある。お値段分だけ働いてくれますように。
-
-と思っ…</div>
-</li>
-</ul>
-</section>
-<section class="category-section">
-<h2 class="category-heading">
+  <span class="widget-cat-count">8</span>
+</li><li>
   <a href="categories/openingofrestaurant.html">6.できるか店舗</a>
-</h2>
-<ul class="post-list">
-<li class="post-card">
-  <h2><a href="posts/conditions.html">飲食店の設計条件</a></h2>
-  <div class="post-meta">2024年07月01日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
-  <div class="post-excerpt">飲食店設計に求められること
-ChatGPTにまとめてもらおう。
-
-
-以下に、飲食店開業における法的基準として重要な項目について具体的な基準を挙げます。これらは一般的な指針であり、地域や種類によって詳細な要件が異なる場合がありますので、実際の…</div>
-</li><li class="post-card">
-  <h2><a href="posts/itteisou.html">第一種低層住居専用地域で飲食店</a></h2>
-  <div class="post-meta">2024年07月02日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
-  <div class="post-excerpt">第一種低層住居専用地域の条件
-イッテイソウ、我が家を悩ませるもう一つのテーマがこれだ。
-
-建築基準法でのよりどころはココ。
-
-
-建築基準法第130条の3　第一種低層住居専用地域内に建築することができる兼用住宅
-
-法別表第２(い)項第二号（法…</div>
-</li><li class="post-card">
-  <h2><a href="posts/barrier_free.html">5坪なんですけど…バリアフリー</a></h2>
-  <div class="post-meta">2024年07月08日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
-  <div class="post-excerpt">バリアフリー対応とは
-後述の法令・条例による、バリアフリー対応とは具体的には以下のような内容である。
-
-
- 	段差解消:
-
- 	出入口や店内の段差を解消し、スロープを設置する。
-
-
- 	幅広い通路:
-
- 	車椅子が通れるように、通路の幅を確…</div>
-</li><li class="post-card">
-  <h2><a href="posts/emergencylights.html">5坪なんですけど…非常用照明</a></h2>
-  <div class="post-meta">2024年07月10日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
-  <div class="post-excerpt">非常用照明や非常口表示板
-バリアフリーの対応ほど大きな費用ではないが、非常用照明や非常口の表示板も店舗には求められる。
-
-根拠法はこんなところのようだ。例によってBy ChatGPT様。
-
-
- 	建築基準法
-建築基準法は、建物の構造や設備に…</div>
-</li><li class="post-card">
-  <h2><a href="posts/hand_washing_1.html">5坪なんですけど…手洗いの話～1</a></h2>
-  <div class="post-meta">2024年07月14日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
-  <div class="post-excerpt">手洗いとお手洗い
-「手洗い」とは一義的には「手を洗うこと」だろう。しかし、家づくり民からすると、「手を洗う場所」である。その重要パーツとしての「洗面台」を指すこともあるかもしれない。異論は認めない。
-
-さて、先頭に＜お＞が着くと丁寧語になる…</div>
-</li><li class="post-card">
-  <h2><a href="posts/hand_washing_2.html">5坪なんですけど…手洗いの話～2</a></h2>
-  <div class="post-meta">2024年07月15日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
-  <div class="post-excerpt">蛇口問題（続き）
-前項に挙げた厨房内手洗い、シンク×2、お客様用手洗い。ここまでで蛇口は4つとなっている。
-
-しかし飲食店で必要な蛇口はこれにとどまらない。例えば浄水器、製氷機、あるいはスチコンだって水を使う＝蛇口が必要となる。
-
-ここまで…</div>
-</li><li class="post-card">
-  <h2><a href="posts/life_infra.html">ガスと電気と水道と</a></h2>
-  <div class="post-meta">2024年07月18日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
-  <div class="post-excerpt">水光熱費の契約
-水道の話はこちら。飲食店兼用ならではの水栓数問題に悩まされたお話。
-
-そこでもふれたが、手っ取り早いのは、水光熱それぞれについて自宅と店舗とで別々に契約することだ。経費問題に加えて、メンテナンス的にもメリットがある。ただし確…</div>
-</li><li class="post-card">
-  <h2><a href="posts/greasetrap.html">グリーストラップの話</a></h2>
-  <div class="post-meta">2024年09月17日 &nbsp; <span class="cat-badge">6.できるか店舗</span></div>
-  <div class="post-excerpt">以前にグリーストラップの話を簡単に書いた。その続きであり、備忘メモとしての投稿。
-
-これはなかなか悩みの種。料金もさることながら、床の構造にもかかわる。
-結局我が家は置床式を選択したので、大がかりな工事は不要になった。
-
-と、こんなものを発…</div>
-</li>
-</ul>
-</section>
-<section class="category-section">
-<h2 class="category-heading">
+  <span class="widget-cat-count">8</span>
+</li><li>
   <a href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a>
-</h2>
-<ul class="post-list">
-<li class="post-card">
-  <h2><a href="posts/stickingpoint.html">狭小住宅に詰め込んだもの</a></h2>
-  <div class="post-meta">2024年07月03日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
-  <div class="post-excerpt">夫・すけちのこだわり
-&amp;nbsp;
-
-店舗併設が最重要なこだわりとしてあり、かつ、その上で2LDKを最低限必要としたことから地下室問題が発生した。店舗問題と地下室問題がどでかい。
-
-そのうえで、店舗を除く「住居」としてこだわったことを記して…</div>
-</li><li class="post-card">
-  <h2><a href="posts/think_totally.html">「トータル」に考えたい</a></h2>
-  <div class="post-meta">2024年07月04日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
-  <div class="post-excerpt">施主にしか判断できないこと
-前項の続き。大事にしていたことのもう一つが「トータルで考える」こと。それはつまりこんなことだ。
-
- 	初期費とメンテナンス費のトータルコスト
- 	本体建築費と外構費のトータルコスト
- 	性能と費用のバランス
- 	…</div>
-</li><li class="post-card">
-  <h2><a href="posts/no_margin.html">1マスも無駄にしないお話</a></h2>
-  <div class="post-meta">2024年07月05日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
-  <div class="post-excerpt">我が家の余白
-各部屋、水回り、玄関、それに収納などに活用されているスペースはすべて無駄がないとする。（広すぎるみたいな話はあれどそれは生活スタイルや価値観による）
-
-それ以外のスペースについて洗い出すと、
-
- 	玄関ホール～ダイニングへの廊…</div>
-</li><li class="post-card">
-  <h2><a href="posts/f_type_aircon.html">F式全館空調は断念</a></h2>
-  <div class="post-meta">2024年07月23日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
-  <div class="post-excerpt">F式全館空調
-玄人はだしとは言うが、家づくりにもとんでもない素人の方がいる。フエッピーさんという方がその一人だ。特に空調についてだが、理論と実践と検証がすさまじい。 これから注文住宅を建てられる方でまだ見ていない人はぜひこちらを。
-
-htt…</div>
-</li><li class="post-card">
-  <h2><a href="posts/kanban.html">閑話休題　新築立て看板</a></h2>
-  <div class="post-meta">2024年07月29日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
-  <div class="post-excerpt">現状ステータス（2024年7月末）
-現在のステータスは本体は基礎工事中である。
-店舗については内装工事等を別契約にしているので、まだ確定していない。
-
-住宅の工夫やこだわりは、地下をはじめ、人並みにあるつもりだが、住んでみないとわからないこ…</div>
-</li><li class="post-card">
-  <h2><a href="posts/grants.html">助成金の話（申請中）</a></h2>
-  <div class="post-meta">2024年08月21日 &nbsp; <span class="cat-badge">7.狭小住宅でのチャレンジ</span></div>
-  <div class="post-excerpt">利用した助成金制度
-助成金は使えるものはすべて使いたい。税金は取るほうはきっちりだが、減らしたり取り戻したりするのは極めて不親切な自己責任。ハウスメーカーさんが詳しいものもあれば、そうでもないものもあるようなので、自分でもしっかり調べるべし…</div>
-</li>
-</ul>
-</section>
+  <span class="widget-cat-count">6</span>
+</li></ul>
+    </div>
+  </div>
+</aside>
+</div>
+<div class="note-banner-wrap">
+  <div class="note-banner">
+    <a class="note-banner-link" href="https://note.com/vast_acacia8657/n/nbbd0dd62acf4" target="_blank" rel="noopener">
+      <span class="note-banner-icon">📝</span>
+      <span class="note-banner-text">
+        <span class="note-banner-label">note で読む</span>
+        <span class="note-banner-title">地下室はやるべきか？5坪で1300万円かかった実体験｜tensukechi</span>
+      </span>
+      <span class="note-banner-arrow">→</span>
+    </a>
+  </div>
 </div>
 <footer>
-  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+  <div class="footer-inner">
+    <div class="footer-cats-section">
+      <div class="footer-cats-title">カテゴリー</div>
+      <div class="footer-cats-list"><a class="footer-cat-link" href="categories/introduction.html">1. はじめに</a><a class="footer-cat-link" href="categories/mycondition.html">2.条件整理</a><a class="footer-cat-link" href="categories/journeytofindproperty.html">3.物件探しの旅</a><a class="footer-cat-link" href="categories/partnerselection.html">4.建築パートナー選定</a><a class="footer-cat-link" href="categories/undergrounddungeon.html">5.迷宮～地下室</a><a class="footer-cat-link" href="categories/openingofrestaurant.html">6.できるか店舗</a><a class="footer-cat-link" href="categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+    </div>
+    <div class="footer-copy">&copy; 2024-2026 半地下店舗兼用準防火第一種低層狭小住宅</div>
+  </div>
 </footer>
 </body>
 </html>

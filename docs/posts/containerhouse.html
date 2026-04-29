@@ -4,158 +4,627 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>コンテナハウス | 半地下店舗兼用準防火第一種低層狭小住宅</title>
+  <meta name="description" content="東京都内サラリーマン「てんすけち」による家づくり記録。 半地下・店舗兼用・狭小住宅という変わった家づくりの全記録。">
   <style>
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
 :root {
-  --bg: #fafaf8;
-  --text: #2d2d2d;
-  --muted: #666;
-  --accent: #5c6bc0;
-  --accent-light: #e8eaf6;
-  --border: #e0e0e0;
-  --card-bg: #fff;
-  --max-w: 860px;
+  --accent:      #d9381e;
+  --accent-dark: #b02e18;
+  --accent-light:#fdf0ee;
+  --bg:          #f0ede8;
+  --card-bg:     #ffffff;
+  --text:        #333333;
+  --muted:       #888888;
+  --border:      #e0dbd4;
+  --header-bg:   #ffffff;
+  --footer-bg:   #2b2b2b;
+  --sidebar-w:   300px;
+  --main-max:    1100px;
+  --radius:      6px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: 'Noto Sans JP', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-size: 15px;
   line-height: 1.8;
-  font-size: 16px;
 }
 
 a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { color: var(--accent-dark); text-decoration: underline; }
+img { max-width: 100%; height: auto; }
 
-/* ヘッダー */
-header {
-  background: var(--accent);
-  color: #fff;
-  padding: 1.2rem 1.5rem;
+/* ===== ヘッダー ===== */
+.site-header {
+  background: var(--header-bg);
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-header a { color: #fff; }
-.site-title { font-size: 1.1rem; font-weight: bold; line-height: 1.4; }
-.site-nav { margin-top: 0.5rem; font-size: 0.88rem; opacity: 0.9; }
-.site-nav a { margin-right: 1rem; color: #fff; }
-
-/* メインレイアウト */
-.container {
-  max-width: var(--max-w);
+.header-inner {
+  max-width: var(--main-max);
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+}
+.site-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.site-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+  white-space: nowrap;
+}
+.site-name a { color: inherit; }
+.site-name a:hover { text-decoration: none; color: var(--accent); }
+.site-tagline {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.header-nav {
+  display: flex;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+.header-nav a {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+  color: var(--text);
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.header-nav a:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+  text-decoration: none;
 }
 
-/* 記事カード（一覧） */
-.post-list { list-style: none; }
+/* ===== パンくず ===== */
+.breadcrumb-bar {
+  background: #f7f4f0;
+  border-bottom: 1px solid var(--border);
+}
+.breadcrumb {
+  max-width: var(--main-max);
+  margin: 0 auto;
+  padding: 0.5rem 20px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.breadcrumb a { color: var(--accent); }
+.breadcrumb-sep { color: #ccc; }
+
+/* ===== メインレイアウト ===== */
+.page-wrap {
+  max-width: var(--main-max);
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+  display: grid;
+  grid-template-columns: 1fr var(--sidebar-w);
+  gap: 28px;
+  align-items: start;
+}
+.page-wrap.full-width {
+  grid-template-columns: 1fr;
+}
+
+/* ===== カテゴリー見出し ===== */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+}
+.section-title h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.section-title h2 a { color: inherit; }
+.section-title h2 a:hover { color: var(--accent); text-decoration: none; }
+.section-count {
+  font-size: 0.72rem;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+}
+.section-more {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+.section-more:hover { text-decoration: underline; }
+.category-section { margin-bottom: 36px; }
+
+/* ===== 記事カードグリッド ===== */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  list-style: none;
+}
 .post-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.post-card:hover {
+  box-shadow: 0 6px 22px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.post-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #e8e2da;
+}
+.post-thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #e8e0d4 0%, #d4cbbf 100%);
+  color: #aaa;
+  font-size: 2rem;
+}
+.post-card-body {
+  padding: 12px 14px 14px;
+}
+.post-cat-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.cat-badge {
+  font-size: 0.68rem;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid #f0c0b0;
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+  line-height: 1.6;
+}
+.cat-badge:hover { background: var(--accent); color: #fff; text-decoration: none; border-color: var(--accent); }
+.post-card-body h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.post-card-body h3 a { color: var(--text); }
+.post-card-body h3 a:hover { color: var(--accent); text-decoration: none; }
+.post-date {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* カテゴリーページ・横並びリスト */
+.post-list-rows { list-style: none; }
+.post-row {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
   transition: box-shadow 0.2s;
 }
-.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
-.post-card h2 { font-size: 1.1rem; margin-bottom: 0.35rem; }
-.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
-.post-excerpt { font-size: 0.93rem; color: #444; }
-.cat-badge {
-  display: inline-block;
-  background: var(--accent-light);
-  color: var(--accent);
-  font-size: 0.75rem;
-  padding: 0.15rem 0.55rem;
-  border-radius: 4px;
-  margin-right: 0.3rem;
+.post-row:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+.post-row-thumb {
+  width: 160px;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+  background: #e8e2da;
 }
-
-/* カテゴリーセクション見出し */
-.category-section { margin-bottom: 2.5rem; }
-.category-heading {
-  font-size: 1.05rem;
-  font-weight: bold;
-  color: var(--accent);
-  border-left: 4px solid var(--accent);
-  padding-left: 0.75rem;
-  margin-bottom: 1rem;
+.post-row-thumb-placeholder {
+  width: 160px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #e8e0d4 0%, #d4cbbf 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 1.5rem;
 }
-.category-heading a { color: inherit; }
+.post-row-body {
+  padding: 12px 16px;
+  flex: 1;
+  min-width: 0;
+}
+.post-row-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+.post-row-body h3 a { color: var(--text); }
+.post-row-body h3 a:hover { color: var(--accent); text-decoration: none; }
+.post-row-excerpt { font-size: 0.82rem; color: #666; line-height: 1.65; margin-top: 5px; }
 
-/* 記事本文 */
+/* ===== 記事ページ ===== */
 article.post {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 2rem 2.2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
-article.post h1 { font-size: 1.5rem; margin-bottom: 0.5rem; line-height: 1.5; }
-article.post .post-meta { margin-bottom: 1.5rem; }
-.post-body { margin-top: 1.5rem; }
-.post-body h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
-.post-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
-.post-body h4 { font-size: 1rem; margin: 1.2rem 0 0.5rem; }
-.post-body p { margin-bottom: 1.1rem; }
-.post-body ul, .post-body ol { margin: 0.8rem 0 1rem 1.6rem; }
+.post-hero-img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+.post-header {
+  padding: 22px 26px 18px;
+  border-bottom: 1px solid var(--border);
+}
+article.post h1 {
+  font-size: 1.45rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.post-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.post-body {
+  padding: 22px 26px 28px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+.post-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 2rem 0 0.7rem;
+  padding: 0.5rem 0.9rem;
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  color: var(--text);
+  border-radius: 0 4px 4px 0;
+}
+.post-body h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 1.6rem 0 0.55rem;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--border);
+}
+.post-body h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 1.3rem 0 0.45rem;
+  color: var(--accent-dark);
+}
+.post-body p { margin-bottom: 1rem; }
+.post-body ul, .post-body ol { margin: 0.7rem 0 1rem 1.6rem; }
 .post-body li { margin-bottom: 0.4rem; }
-.post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 0.8rem 0; }
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 .post-body blockquote {
   border-left: 4px solid var(--accent);
   background: var(--accent-light);
   padding: 0.8rem 1.2rem;
-  margin: 1rem 0;
+  margin: 1.1rem 0;
   border-radius: 0 6px 6px 0;
+  color: #555;
 }
-.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
-.post-body th { background: var(--accent-light); }
+.post-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; }
+.post-body th { background: var(--accent-light); font-weight: 700; }
+.post-body tr:nth-child(even) td { background: #faf8f5; }
 
-/* ナビゲーション */
-.post-nav { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-.post-nav a {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-.back-to-list { margin-top: 1.5rem; }
-
-/* カテゴリーページ */
-.page-heading {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--accent);
-}
-
-/* フッター */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--muted);
-  font-size: 0.82rem;
+/* 前後ナビ */
+.post-footer {
+  padding: 18px 26px;
   border-top: 1px solid var(--border);
-  margin-top: 3rem;
+  background: #faf8f5;
+}
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.post-nav a {
+  display: block;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  color: var(--text);
+  background: var(--card-bg);
+  line-height: 1.5;
+  transition: border-color 0.15s, color 0.15s;
+}
+.post-nav a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.nav-label { font-size: 0.68rem; color: var(--muted); display: block; margin-bottom: 2px; }
+.nav-next { text-align: right; }
+.back-link { font-size: 0.82rem; }
+
+/* ===== サイドバー ===== */
+.sidebar { display: flex; flex-direction: column; gap: 20px; }
+.widget {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.widget-title {
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  letter-spacing: 0.03em;
+}
+.widget-body { padding: 12px 14px; }
+
+/* カテゴリーウィジェット */
+.widget-cats { list-style: none; }
+.widget-cats li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.widget-cats li:last-child { border-bottom: none; }
+.widget-cats a { color: var(--text); }
+.widget-cats a:hover { color: var(--accent); text-decoration: none; }
+.widget-cat-count {
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: var(--bg);
+  padding: 0.1rem 0.45rem;
+  border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-  article.post { padding: 1.2rem 1rem; }
-  .container { padding: 1.2rem 1rem; }
+/* 最近の投稿ウィジェット */
+.widget-posts { list-style: none; }
+.widget-post {
+  display: flex;
+  gap: 9px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.widget-post:last-child { border-bottom: none; }
+.widget-post-thumb {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: #e8e2da;
+}
+.widget-post-thumb-placeholder {
+  width: 60px;
+  height: 45px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #e8e0d4 0%, #d4cbbf 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.widget-post-info { flex: 1; min-width: 0; }
+.widget-post-info a {
+  font-size: 0.8rem;
+  color: var(--text);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.widget-post-info a:hover { color: var(--accent); text-decoration: none; }
+.widget-post-date { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
+
+/* プロフィールウィジェット */
+.widget-profile {
+  text-align: center;
+  padding: 16px 14px;
+}
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 2rem;
+  border: 3px solid var(--accent);
+}
+.profile-name { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.profile-desc { font-size: 0.78rem; color: #666; line-height: 1.7; text-align: left; }
+
+/* ===== カテゴリーページ hero ===== */
+.cat-page-hero {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  border-left: 5px solid var(--accent);
+}
+.cat-page-hero h1 { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+.cat-page-hero .cat-count { font-size: 0.8rem; color: var(--muted); margin-top: 3px; }
+
+/* ===== フッター ===== */
+footer {
+  background: var(--footer-bg);
+  color: rgba(255,255,255,0.6);
+  padding: 36px 20px 24px;
+  font-size: 0.82rem;
+  margin-top: 0;
+}
+.footer-inner {
+  max-width: var(--main-max);
+  margin: 0 auto;
+}
+.footer-nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-nav a { color: rgba(255,255,255,0.7); }
+.footer-nav a:hover { color: #fff; text-decoration: none; }
+.footer-cats-section { margin-bottom: 18px; }
+.footer-cats-title { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-bottom: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
+.footer-cats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.footer-cat-link {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+.footer-cat-link:hover { color: #fff; border-color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-copy { color: rgba(255,255,255,0.35); font-size: 0.75rem; }
+
+/* ===== note バナー ===== */
+.note-banner-wrap {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 24px 20px;
+}
+.note-banner {
+  max-width: var(--main-max);
+  margin: 0 auto;
+}
+.note-banner-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #41c9b4 0%, #00b294 100%);
+  color: #fff !important;
+  border-radius: 10px;
+  padding: 18px 24px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(0,178,148,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.note-banner-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,178,148,0.4);
+  text-decoration: none !important;
+  color: #fff !important;
+}
+.note-banner-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.note-banner-text { flex: 1; }
+.note-banner-label {
+  font-size: 0.72rem;
+  opacity: 0.85;
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+  display: block;
+}
+.note-banner-title {
+  font-size: 1.0rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.note-banner-arrow {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .page-wrap {
+    grid-template-columns: 1fr;
+    padding: 16px 12px 36px;
+  }
+  .post-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .header-inner { flex-direction: column; align-items: flex-start; padding: 10px 16px; min-height: unset; }
+  .header-nav { flex-wrap: wrap; }
+  .post-row-thumb, .post-row-thumb-placeholder { width: 100px; }
+  .post-header, .post-body, .post-footer { padding: 16px; }
+  article.post h1 { font-size: 1.2rem; }
+}
+@media (max-width: 480px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .post-nav { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
-<header>
-  <div class="site-title"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
-  <nav class="site-nav"><a href="../index.html">トップ</a></nav>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">
+      <div class="site-name"><a href="../index.html">半地下店舗兼用準防火第一種低層狭小住宅</a></div>
+      <div class="site-tagline">by てんすけち</div>
+    </div>
+    <nav class="header-nav"><a href="../categories/introduction.html">1. はじめに</a><a href="../categories/mycondition.html">2.条件整理</a><a href="../categories/journeytofindproperty.html">3.物件探しの旅</a><a href="../categories/partnerselection.html">4.建築パートナー選定</a><a href="../categories/undergrounddungeon.html">5.迷宮～地下室</a><a href="../categories/openingofrestaurant.html">6.できるか店舗</a><a href="../categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></nav>
+  </div>
 </header>
-<div class="container">
-<article class="post">
-  <h1>コンテナハウス</h1>
-  <div class="post-meta">2024年06月14日 &nbsp; <a class="cat-badge" href="../categories/journeytofindproperty.html">3.物件探しの旅</a></div>
+<div class="breadcrumb-bar"><nav class="breadcrumb"><a href="../index.html">HOME</a><span class="breadcrumb-sep">›</span><a href="../categories/journeytofindproperty.html">3.物件探しの旅</a><span class="breadcrumb-sep">›</span><span>コンテナハウス</span></nav></div>
+<div class="page-wrap">
+  <main><article class="post">
+  <img src="https://tensukechi.com/wp-content/uploads/2024/06/DALL·E-2024-06-14-18.46.04-An-illustration-for-a-blog-post-about-combining-a-residential-house-with-a-container-house-for-a-restaurant.-The-image-should-depict-a-small-cozy-res.webp" alt="コンテナハウス" class="post-hero-img">
+  <div class="post-header">
+    <h1>コンテナハウス</h1>
+    <div class="post-meta-row">
+      <span class="post-date">2024/06/14</span>
+      <a class="cat-badge" href="../categories/journeytofindproperty.html">3.物件探しの旅</a>
+    </div>
+  </div>
   <div class="post-body"><h2>コンテナハウスで自宅併設？</h2>
 もう一回考えるならコンテナハウス併設で考えてみたい。こんなの（<a href="http://www.juutakuecokoubou.com/kibako/index.html">住たくeco工房さん「木箱」</a>）。ステキすぎる。
 これならちょっと広い駐車場がある家なら、併設で店舗開業できそう。
@@ -187,15 +656,136 @@ footer {
 
 家庭臭がしないことって大事な気がするんですよね。自分たち自身が売り物になるくらい魅力的ならいいのかもしれんが。
 
-（続く）
-
-<!-- notionvc: 45883667-0429-4fc0-b6ee-f529cafae81e --></div>
-  <div class="post-nav"><a href="demon_modification.html">← 中古物件/自宅改造で飲食店開業？</a><a href="restaurantlocation.html">土地探し～店舗の立地条件 →</a></div>
-  <div class="back-to-list"><a href="../index.html">← 記事一覧に戻る</a></div>
-</article>
+（続く）</div>
+  <div class="post-footer">
+    <div class="post-nav"><a href="demon_modification.html"><span class="nav-label">← 前の記事</span>中古物件/自宅改造で飲食店開業？</a><a class="nav-next" href="restaurantlocation.html"><span class="nav-label">次の記事 →</span>土地探し～店舗の立地条件</a></div>
+    <div class="back-link"><a href="../index.html">← 記事一覧に戻る</a></div>
+  </div>
+</article></main>
+  <aside class="sidebar">
+  <div class="widget">
+    <div class="widget-title">プロフィール</div>
+    <div class="widget-body widget-profile">
+      <div class="profile-avatar">🏠</div>
+      <div class="profile-name">てんすけち</div>
+      <div class="profile-desc">東京都内に住むサラリーマン。<br>変わった家づくりの全記録を公開中。</div>
+    </div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">最近の投稿</div>
+    <div class="widget-body" style="padding:6px 14px">
+      <ul class="widget-posts"><li class="widget-post">
+  <a href="../posts/greasetrap.html"><img src="https://tensukechi.com/wp-content/uploads/2024/09/DALL·E-2024-09-17-17.52.29-A-hand-drawn-style-illustration-showing-a-grease-trap-and-the-challenges-of-cleaning-it.-The-scene-includes-a-grease-trap-with-grimy-oily-residue-an.webp" alt="グリーストラップの話" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/greasetrap.html">グリーストラップの話</a>
+    <div class="widget-post-date">2024/09/17</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/grants.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-21-12.57.41-A-hand-drawn-style-illustration-of-a-house-made-entirely-of-money.-The-house-should-have-walls-roof-and-windows-all-constructed-from-stacks-of-bills.webp" alt="助成金の話（申請中）" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/grants.html">助成金の話（申請中）</a>
+    <div class="widget-post-date">2024/08/21</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/underground_box.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-14-17.07.18-A-hand-drawn-style-illustration-of-a-box-shaped-shelter-being-constructed-underground.-The-scene-features-a-robust-concrete-structure-with-clear-def.webp" alt="地下ボックスでけた" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/underground_box.html">地下ボックスでけた</a>
+    <div class="widget-post-date">2024/08/14</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/entrance_to_basement.html"><img src="https://tensukechi.com/wp-content/uploads/2024/08/DALL·E-2024-08-08-16.33.49-A-hand-drawn-style-illustration-of-the-entrance-to-a-basement.-The-scene-shows-a-narrow-stairway-leading-down-into-a-dark-partially-constructed-under.webp" alt="思ったより深い" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/entrance_to_basement.html">思ったより深い</a>
+    <div class="widget-post-date">2024/08/08</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/kanban.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-29-11.32.54-A-hand-drawn-style-illustration-of-a-construction-site-with-a-clearly-visible-Building-Permit-Display-Board-建築確認済表示板-prominently-placed.-The-scene.webp" alt="閑話休題　新築立て看板" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/kanban.html">閑話休題　新築立て看板</a>
+    <div class="widget-post-date">2024/07/29</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/f_type_aircon.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-23-08.41.00-A-hand-drawn-style-illustration-of-a-small-house-with-an-oversized-air-conditioner-installed.-The-scene-should-be-slightly-humorous-with-the-large-ai.webp" alt="F式全館空調は断念" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/f_type_aircon.html">F式全館空調は断念</a>
+    <div class="widget-post-date">2024/07/23</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/life_infra.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-18-09.12.10-A-hand-drawn-style-illustration-depicting-a-person-surrounded-by-representatives-from-gas-water-and-electricity-companies-who-are-bullying-or-press.webp" alt="ガスと電気と水道と" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/life_infra.html">ガスと電気と水道と</a>
+    <div class="widget-post-date">2024/07/18</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/hand_washing_2.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-15-08.40.33-A-hand-drawn-style-illustration-of-a-quirky-house-with-numerous-water-faucets-protruding-from-various-places.-The-house-should-look-unusual-with-fauce.webp" alt="5坪なんですけど…手洗いの話～2" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/hand_washing_2.html">5坪なんですけど…手洗いの話～2</a>
+    <div class="widget-post-date">2024/07/15</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/hand_washing_1.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-14-12.54.47-A-hand-drawn-style-illustration-depicting-a-cluttered-employee-handwashing-station-in-a-small-restaurant.-The-scene-includes-a-sink-with-various-items.webp" alt="5坪なんですけど…手洗いの話～1" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/hand_washing_1.html">5坪なんですけど…手洗いの話～1</a>
+    <div class="widget-post-date">2024/07/14</div>
+  </div>
+</li><li class="widget-post">
+  <a href="../posts/old_well.html"><img src="https://tensukechi.com/wp-content/uploads/2024/07/DALL·E-2024-07-12-10.26.38-A-hand-drawn-style-illustration-depicting-a-construction-site-where-an-old-well-has-been-discovered.-The-scene-includes-construction-workers-uncoverin.webp" alt="裏話　～古井戸が出てきた" class="widget-post-thumb" loading="lazy"></a>
+  <div class="widget-post-info">
+    <a href="../posts/old_well.html">裏話　～古井戸が出てきた</a>
+    <div class="widget-post-date">2024/07/12</div>
+  </div>
+</li></ul>
+    </div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">カテゴリー</div>
+    <div class="widget-body" style="padding:6px 14px">
+      <ul class="widget-cats"><li>
+  <a href="../categories/introduction.html">1. はじめに</a>
+  <span class="widget-cat-count">1</span>
+</li><li>
+  <a href="../categories/mycondition.html">2.条件整理</a>
+  <span class="widget-cat-count">1</span>
+</li><li>
+  <a href="../categories/journeytofindproperty.html">3.物件探しの旅</a>
+  <span class="widget-cat-count">5</span>
+</li><li>
+  <a href="../categories/partnerselection.html">4.建築パートナー選定</a>
+  <span class="widget-cat-count">7</span>
+</li><li>
+  <a href="../categories/undergrounddungeon.html">5.迷宮～地下室</a>
+  <span class="widget-cat-count">8</span>
+</li><li>
+  <a href="../categories/openingofrestaurant.html">6.できるか店舗</a>
+  <span class="widget-cat-count">8</span>
+</li><li>
+  <a href="../categories/narrow_house.html">7.狭小住宅でのチャレンジ</a>
+  <span class="widget-cat-count">6</span>
+</li></ul>
+    </div>
+  </div>
+</aside>
+</div>
+<div class="note-banner-wrap">
+  <div class="note-banner">
+    <a class="note-banner-link" href="https://note.com/vast_acacia8657/n/nbbd0dd62acf4" target="_blank" rel="noopener">
+      <span class="note-banner-icon">📝</span>
+      <span class="note-banner-text">
+        <span class="note-banner-label">note で読む</span>
+        <span class="note-banner-title">地下室はやるべきか？5坪で1300万円かかった実体験｜tensukechi</span>
+      </span>
+      <span class="note-banner-arrow">→</span>
+    </a>
+  </div>
 </div>
 <footer>
-  <p>&copy; 半地下店舗兼用準防火第一種低層狭小住宅</p>
+  <div class="footer-inner">
+    <div class="footer-cats-section">
+      <div class="footer-cats-title">カテゴリー</div>
+      <div class="footer-cats-list"><a class="footer-cat-link" href="../categories/introduction.html">1. はじめに</a><a class="footer-cat-link" href="../categories/mycondition.html">2.条件整理</a><a class="footer-cat-link" href="../categories/journeytofindproperty.html">3.物件探しの旅</a><a class="footer-cat-link" href="../categories/partnerselection.html">4.建築パートナー選定</a><a class="footer-cat-link" href="../categories/undergrounddungeon.html">5.迷宮～地下室</a><a class="footer-cat-link" href="../categories/openingofrestaurant.html">6.できるか店舗</a><a class="footer-cat-link" href="../categories/narrow_house.html">7.狭小住宅でのチャレンジ</a></div>
+    </div>
+    <div class="footer-copy">&copy; 2024-2026 半地下店舗兼用準防火第一種低層狭小住宅</div>
+  </div>
 </footer>
 </body>
 </html>
