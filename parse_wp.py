@@ -151,9 +151,6 @@ def build_cat_posts(posts):
 # ---- CSS ----
 
 CSS = """
-/* ===== Google Fonts ===== */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
-
 :root {
   --accent:      #d9381e;
   --accent-dark: #b02e18;
@@ -836,6 +833,9 @@ def page_shell(title, body_content, base_path="", all_posts=None, cat_posts=None
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{html.escape(page_title)}</title>
   <meta name="description" content="{html.escape(SITE_DESCRIPTION.replace(chr(10), ' '))}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <style>{CSS}</style>
 </head>
 <body>
